@@ -1,0 +1,86 @@
+<?php
+
+namespace Admin\model\page;
+
+use Potato\helper\Text;
+use Potato\Model;
+
+class PageRepository extends Model
+{
+    public function getPages()
+    {
+        $sql = $this->queryBuilder
+            ->select()
+            ->from('page')
+            ->orderBy('id', 'DESC')
+            ->sql();
+
+        return $this->db->query($sql);
+    }
+
+    public function createPage($params)
+    {
+        $page = new Page;
+        $page->setTitle($params['page-title']);
+        $page->setContent($params['content']);
+        $page->setSegment(Text::transliteration($params['page-title']));
+
+        return $page->save();
+    }
+
+    public function updatePage($params)
+    {
+        if (isset($params['page-id'])) {
+            $page = new Page($params['page-id']);
+            $page->setTitle($params['page-title']);
+            $page->setContent($params['page-content']);
+            $page->setType($params['page-type']);
+            $page->setStatus($params['page-status']);
+            $page->save();
+        }
+        return null;
+    }
+
+    public function refreshSegment($params)
+    {
+        if (isset($params['page-id'])) {
+            $page = new Page($params['page-id']);
+            $page->setSegment($params['page-segment']);
+            $page->save();
+        }
+        return null;
+    }
+
+    public function getPageData($id)
+    {
+        $page = new Page($id);
+        return $page->findOne();
+    }
+
+    public function getPageBySegment($segment)
+    {
+        $sql = $this->queryBuilder
+            ->select()
+            ->from('page')
+            ->where('segment', $segment)
+            ->limit(1)
+            ->sql();
+
+        $result = $this->db->query($sql, $this->queryBuilder->values);
+
+        return isset($result[0]) ? $result[0] : false;
+    }
+
+
+    public function deletePage($itemId)
+    {
+        $sql = $this->queryBuilder
+            ->delete()
+            ->from('page')
+            ->where('id', $itemId)
+            ->sql();
+
+        return $this->db->query($sql, $this->queryBuilder->values);
+    }
+
+}

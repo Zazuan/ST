@@ -1,0 +1,16 @@
+{
+    "name": "zazah/sample-text",
+    "autoload": {
+        "psr-4": {
+            "Potato\\": "potato",
+            "SampleText\\": "sampletext",
+            "Potato\\DI\\": "potato/DI",
+            "Admin\\": "admin",
+            "Plugin\\": "source/plugins"
+        }
+    },
+    "require": {
+        "ext-pdo": "*",
+        "ext-json": "*"
+    }
+}

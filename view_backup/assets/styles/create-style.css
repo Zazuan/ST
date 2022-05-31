@@ -1,0 +1,37 @@
+@import url("style.css");
+
+.wrapper__create-site input {
+	font-size: 34px;
+	width: 300px;
+	border: transparent;
+	background-color: #F5F5F5;
+}
+
+.wrapper__create-site input:focus{
+    outline: none;
+}
+
+.wrapper__create-site {
+	margin-top: 105px;
+}
+
+.card {
+	height: 153px;
+}
+
+.card__text {
+	padding-top: 20px;
+}
+
+.card:after {
+	display: block;
+	content: '';
+	border-bottom: 2px solid;
+	border-color: #9E70FF;
+	transform: scaleX(0);  
+  	transition: transform 250ms ease-in-out;
+}
+
+.card:hover:after {
+	transform: scaleX(1);
+}

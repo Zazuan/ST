@@ -1,0 +1,30 @@
+
+.wrapper__head{
+    padding-top: 25px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head__content-settings{
+    margin-bottom: 30px;
+}
+
+.head__content-settings input {
+    margin: 15px 0 0 20px;
+    font-size: 24px;
+    padding: 14px 20px;
+    border: transparent;
+    border-bottom: 1px solid #9E70FF;
+    width: 100%;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+input:focus{
+    outline: none;
+}
+
+button:focus{
+    outline: 1px solid #9E70FF;
+}

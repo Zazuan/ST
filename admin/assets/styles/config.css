@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-style: light;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ul li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+legend {
+  color: #000;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding-left: 66px;
+  padding-right: 66px;
+}
+@media screen and (max-width: 992px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+* {
+  box-sizing: border-box;
+  font-family: Roboto-Light;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+html,
+body {
+  height: 100%;
+  height: -webkit-fill-available;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+}
+body {
+  background: #333333;
+}
+.flex-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.flex-row_sb {
+  justify-content: space-between;
+}
+.flex-row_ac {
+  align-items: center;
+}
+.flex-row_as {
+  align-items: flex-start;
+}
+.box-row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.box-row > * {
+  flex: 1 1 calc((100% / 3) - 2rem);
+}

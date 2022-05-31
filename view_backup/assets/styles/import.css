@@ -1,0 +1,51 @@
+@import url("style.css");
+
+.wrapper__title {
+	font-size: 34px;
+	padding-top: 25px;
+}
+
+.wrapper__upload-form {
+	width: 990px;
+	height: 453px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	margin: 60px 66px;
+}
+
+.upload-form__content {
+	padding: 30px 30px 25px 30px;
+}
+
+.upload-form__text {
+	padding-top: 25px;
+}
+
+.upload-form__input-file {
+	flex-direction: column;
+	width: 931px;
+	height: 284px;
+	background: #F2F2F2;
+	border-radius: 20px;
+	margin-top: 25px;
+}
+
+.upload-form__help-text {
+	font-size: 20px;
+	color: #C4C4C4;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-form__input-label {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+    display: inline-block;
+    padding: 9px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #575757;
+}

@@ -1,0 +1,140 @@
+@import url("config.css");
+@import url("fonts.css");
+
+.header {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 68px 0 72px;
+}
+
+.h1-title {
+    color: #626262;
+    font-size: 30px;
+    margin: 28px 0 34px 0;
+    font-family: "PlayfairDisplay-Regular";
+}
+
+.text {
+    font-family: "PlayfairDisplay-Regular";
+    color: #626262;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.link {
+    text-decoration: none;
+    color: #b4ad9e;
+    font-family: "Ubuntu";
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.header .header__nav a {
+	display: inline-block;
+    margin-right: 100px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #626262;
+    font-family: "PlayfairDisplay-Regular";
+}
+.header .header__nav a:last-child {
+    margin: 0 auto;
+}
+
+.main-post .main-post__image {
+    height: 509px;
+}
+
+.main-post .main-post__content {
+    padding: 99px 81px 135px 81px;
+}
+
+.main-post .main-post__comment {
+    margin-top: 52px;
+}
+.main-post .main-post__text {
+    margin-bottom: 52px;
+}
+
+.main-post .main-post__title {
+    font-size: 30px;
+    margin-top: 28px;
+    margin-bottom: 34px;
+    font-family: "PlayfairDisplay-Regular";
+    color: #626262;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.post {
+    width: 420px;
+}
+.post .post__image{
+    height: 280px;
+}
+
+.post .post__content {
+    padding-top: 32px;
+    padding-bottom: 132px;
+}
+.form-subscribe {
+    height: 287px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+}
+.form-subscribe .form-subscribe__title {
+    color: #333333;
+    padding-bottom: 80px;
+    font-family: "PlayfairDisplay-Regular";
+    font-size: 30px;
+    letter-spacing: 0.75px;
+}
+.form-subscribe .form-subscribe__input {
+    width: 400px;
+
+    outline: 0;
+    border: 0;
+
+    background: transparent;
+    border-bottom: 2px solid #000000;
+
+    padding: 14px 3px;
+
+    font-family: "PlayfairDisplay-Regular";
+}
+.form-subscribe .form-subscribe__btn {
+    border: 0;
+    background: transparent;
+
+    position: relative;
+    left: -45px;
+}
+.footer {
+    background-color: #f0f0f0;
+    height: 97px;
+    line-height: 97px;
+}
+.footer .footer__item {
+    display: flex;
+    align-items: center;
+}
+.footer .footer__link {
+    padding-right: 17px;
+    font-size: 14px;
+    color: #000000;
+    font-family: "PlayfairDisplay-Regular";
+    line-height: 24px;
+}
+.footer .footer__item a{
+    padding-right: 17px;
+    color: #000000;
+}
