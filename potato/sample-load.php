@@ -5,7 +5,7 @@ require_once __DIR__ . '/function.php';
 require_once __DIR__ . '/defines.php';
 
 if (version_compare($ver = PHP_VERSION, $req = PHP_MIN, '<')) {
-    die(sprintf('You are running PHP %s, but Flexi needs at least PHP %s to run.', $ver, $req));
+    die(sprintf('You are running PHP %s, but Cms needs at least PHP %s to run.', $ver, $req));
 }
 
 use Potato\Cms;

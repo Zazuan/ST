@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SampleText.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SampleText.loc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/main.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/Cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/Cms.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/Function.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image 12.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/core/config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/config/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/database/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/database/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/router/UrlDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/router/UrlDispatcher.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/sample-load.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/sample-load.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/service/database/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/service/database/Provider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/config/connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/controller/PageController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +56,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -85,11 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Soft\OpenServer\domains\SampleText.loc" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\install" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\assets\styles" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\source\theme\cleaning-services-website-template" />
-      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components\modal\themes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\config" />
@@ -162,6 +142,7 @@
       <workItem from="1653996506376" duration="1779000" />
       <workItem from="1653998323629" duration="1780000" />
       <workItem from="1654000133245" duration="130000" />
+      <workItem from="1654024092126" duration="2999000" />
     </task>
     <servers />
   </component>

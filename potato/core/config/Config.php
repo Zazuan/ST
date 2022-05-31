@@ -25,7 +25,7 @@ class Config
 
     public static function file($group = 'main')
     {
-        $path = $_SERVER['DOCUMENT_ROOT'] . '/config/' . DS . $group . '.php';
+        $path = $_SERVER['DOCUMENT_ROOT'] . DS . 'config' . DS . $group . '.php';
 
         // Check that the file exists before we attempt to load it.
         if (file_exists($path)) {
