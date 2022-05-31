@@ -3,12 +3,11 @@
 ini_set("display_errors",1);
 error_reporting(E_ALL);
 
-define('ROOT_DIR', __DIR__);
-define('DS', DIRECTORY_SEPARATOR);
-//define('SOURCE_DIR', '../../../source/theme/default/');
-define('ENV', 'SampleText');
+const ROOT_DIR = __DIR__;
+const DS = DIRECTORY_SEPARATOR;
+const ENV = 'SampleText';
 
-if (!is_file($_SERVER['DOCUMENT_ROOT'] . '/sampletext/config/connect.php')) {
+if (!is_file($_SERVER['DOCUMENT_ROOT'] . '/config/connect.php')) {
     header('Location: /install');
     exit;
 }

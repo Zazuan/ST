@@ -1,10 +1,10 @@
 
 <?php
 
-define('ROOT_DIR', __DIR__);
+const ROOT_DIR = __DIR__;
 
-define('DS', DIRECTORY_SEPARATOR);
-define('ENV', 'Admin');
+const DS = DIRECTORY_SEPARATOR;
+const ENV = 'Admin';
 
 require_once '../potato/sample-load.php';
 

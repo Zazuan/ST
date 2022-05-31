@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SampleText.loc.iml" filepath="$PROJECT_DIR$/.idea/SampleText.loc.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../flexicms-master/.idea/flexicms-master.iml" filepath="$PROJECT_DIR$/../flexicms-master/.idea/flexicms-master.iml" />
     </modules>
   </component>
 </project>

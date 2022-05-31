@@ -25,7 +25,7 @@ class Config
 
     public static function file($group = 'main')
     {
-        $path = path('config') . DS . $group . '.php';
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/config/' . DS . $group . '.php';
 
         // Check that the file exists before we attempt to load it.
         if (file_exists($path)) {
@@ -44,7 +44,7 @@ class Config
             } else {
                 throw new \Exception(
                     sprintf(
-                        'Config file <strong>%s</strong> is not a valid array.',
+                        'Config file %s is not a valid array.',
                         $path
                     )
                 );
@@ -52,7 +52,7 @@ class Config
         } else {
             throw new \Exception(
                 sprintf(
-                    'Cannot load config from file, file <strong>%s</strong> does not exist.',
+                    'Cannot load config from file, file %s does not exist.',
                     $path
                 )
             );

@@ -8,20 +8,20 @@ use Potato\core\config\Config;
 class Db
 {
     private $link;
+    private $config;
 
-    public function __construct()
+    public function __construct($config = [])
     {
+        $this->config = $config;
         $this->connect();
     }
 
     private function connect()
     {
-        $config = Config::group('connect');
-
-        $dsn = 'mysql:host=' .$config['host'] .';dbname=' .$config['db_name'] .';charset=' .$config['charset'];
+        $dsn = 'mysql:host=' .$this->config['host'] .';dbname=' .$this->config['db_name'] .';charset=' .$this->config['charset'];
 
         try {
-            $this->link = new PDO($dsn, $config['username'], $config['password'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
+            $this->link = new PDO($dsn, $this->config['username'], $this->config['password'], array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING));
         } catch (\PDOException $e) {
             echo 'Connection failed: ' . $e->getMessage();
         }

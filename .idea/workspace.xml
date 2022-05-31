@@ -4,94 +4,28 @@
     <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/SampleText.loc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SampleText.loc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/Route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/add-button.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/check-mark.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/cross-modal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/cross.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/menu.svg" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/img/menu.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/minimo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/options.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/pencil.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/preview-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/preview.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/frame.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/config.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/config.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/create-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/edit-menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/fonts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/import.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/menu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/settings.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/styles/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/ErrorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/SettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/SettingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/page/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/page/Page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/page/PageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/page/PageRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/setting/SettingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/setting/SettingRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/site/Site.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/site/SiteRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/user/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/user/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/article/create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/article/edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/article/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/constructor/edit-menu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/constructor/edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/pages/create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/pages/edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/pages/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/posts/create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/posts/edit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/posts/list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/site/create-site.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/site/import.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/site/upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/connect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/config/main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/Cms.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/Cms.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/Function.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/Function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/config/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/config/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/Function.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/function.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/core/config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/config/Config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/core/database/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/database/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/database/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/database/QueryBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/request/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/request/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/template/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/template/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/Theme.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/template/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/helper/Common.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/helper/Common.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/Route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/config/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/config/connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/config/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/model/menu/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/model/menu/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/model/menu/MenuRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/model/menu/MenuRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/model/menuItem/MenuItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/model/menuItem/MenuItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/model/menuItem/MenuItemRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/model/menuItem/MenuItemRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/default/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/default/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/default/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/default/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/default/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/default/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/core/router/UrlDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/router/UrlDispatcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/sample-load.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/sample-load.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/service/database/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/service/database/Provider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sampletext/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sampletext/config/connect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sampletext/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sampletext/controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/controller/PageController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +47,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -123,6 +57,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
@@ -137,30 +72,31 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flexicms-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\install" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\assets\styles" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\source\theme\cleaning-services-website-template" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components\modal\themes" />
-      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components\modal\menuItems" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\config" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components\modal" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components\modal\pages" />
-      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\constructor" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -223,6 +159,9 @@
       <workItem from="1653952133095" duration="1883000" />
       <workItem from="1653954708281" duration="3041000" />
       <workItem from="1653992708188" duration="1528000" />
+      <workItem from="1653996506376" duration="1779000" />
+      <workItem from="1653998323629" duration="1780000" />
+      <workItem from="1654000133245" duration="130000" />
     </task>
     <servers />
   </component>

@@ -30,7 +30,7 @@ class PageController extends CmsController
             $template = sprintf(self::TEMPLATE_PAGE_MASK, $page->type);
         }
 
-        Page::setStore($page);
+        Page::setPage($page);
 
         $this->view->render($template);
     }

@@ -22,7 +22,7 @@ class Cms
     {
         try {
 
-            require_once __DIR__ . '/../' . mb_strtolower(ENV) . '/Route.php';
+            require_once __DIR__ . '/../' . mb_strtolower(ENV) . '/route.php';
 
             $pluginService = $this->di->get('plugin');
             $plugins = $pluginService->getActivePlugins();

@@ -11,6 +11,11 @@
     },
     "require": {
         "ext-pdo": "*",
-        "ext-json": "*"
-    }
+        "ext-json": "*",
+        "ext-mysqli": "*"
+    },
+    "files": [
+        "potato/defines.php",
+        "potato/function.php"
+    ]
 }

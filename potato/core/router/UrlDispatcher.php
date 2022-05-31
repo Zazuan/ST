@@ -32,7 +32,7 @@ class UrlDispatcher
 
     private function routes($method)
     {
-        return isset($this->routes[$method]) ? $this->routes[$method] : [];
+        return $this->routes[$method] ?? [];
     }
 
 

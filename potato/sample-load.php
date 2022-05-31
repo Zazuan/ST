@@ -1,7 +1,12 @@
 <?php
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/Function.php';
+require_once __DIR__ . '/function.php';
+require_once __DIR__ . '/defines.php';
+
+if (version_compare($ver = PHP_VERSION, $req = PHP_MIN, '<')) {
+    die(sprintf('You are running PHP %s, but Flexi needs at least PHP %s to run.', $ver, $req));
+}
 
 use Potato\Cms;
 use Potato\DI\DI;

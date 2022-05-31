@@ -14,7 +14,7 @@ function path($section)
         case 'controller':
             return sprintf($pathMask, 'controller');
         case 'config':
-            return sprintf($pathMask, 'config');
+            return sprintf(ROOT_DIR . DS . '%s', 'config');
         case 'model':
             return sprintf($pathMask, 'model');
         case 'view':
