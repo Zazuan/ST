@@ -17,12 +17,12 @@ class UserRepository extends Model
         return $this->db->query($sql);
     }
 
-    public function addUser()
+    public function addUser($email, $password, $role)
     {
         $user = new User();
-        $user->setEmail('user@email.com');
-        $user->setPassword(md5(rand(1,10)));
-        $user->setRole('user');
+        $user->setEmail($email);
+        $user->setPassword(md5($password));
+        $user->setRole($role);
         $user->setHash('newuser');
         $user->save();
     }

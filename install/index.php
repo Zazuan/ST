@@ -3,6 +3,8 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../potato/defines.php';
 
+use Admin\model\user\UserRepository;
+
 if (version_compare($ver = PHP_VERSION, $req = PHP_MIN, '<')) {
     die(sprintf('You are running PHP %s, but CMS needs at least PHP %s to run.', $ver, $req));
 }
@@ -38,18 +40,27 @@ if (!empty($request->post()) and $isInstall == false) {
         $result['error'][] = 'The server does not have PDO installed';
     }
 
-    $link = mysqli_connect($config['host'], $config['username'], $config['password'], $config['db_name']);
+    $link = mysqli_connect($config['host'], $config['username'], $config['password']);
     if (!$link) {
         $result['error'][] = 'Could not connect to database';
     } else {
-        mysqli_close($link);
 
-        $sql = file_get_contents('database.sql');
+        //$sql = "CREATE DATABASE `".$config['db_name']."`; " . $sql;
+        $sql = "CREATE DATABASE IF NOT EXISTS `".$config['db_name']."`; ";
 
-        $db = new \Potato\core\database\Db($config);
-        $db->execute($sql);
+        if (mysqli_query($link, $sql)) {
+            //echo "Database created successfully";
+            mysqli_close($link);
 
-        $codeConfig = "<?php
+            $link = mysqli_connect($config['host'], $config['username'], $config['password'], $config['db_name']);
+            $sql = file_get_contents('database.sql');
+
+            $sql .= "INSERT INTO `user` (`id`, `email`, `password`, `hash`, `role`) VALUES (1, 'admin@email.com', 'root', 'newuser', 'admin');";
+
+            $db = new \Potato\core\database\Db($config);
+            $db->execute($sql);
+
+            $codeConfig = "<?php
 return [
     'host'     => '{$config['host']}',
     'db_name'  => '{$config['db_name']}',
@@ -59,8 +70,13 @@ return [
 ];
         ";
 
-        file_put_contents($request->server['DOCUMENT_ROOT'] . '/config/connect.php', $codeConfig);
+            file_put_contents($request->server['DOCUMENT_ROOT'] . '/config/connect.php', $codeConfig);
 
+        } else {
+            echo "Error creating database: " . mysqli_error($link);
+        }
+
+        mysqli_close($link);
         header('Location: /install/');
         exit;
     }
@@ -125,6 +141,7 @@ return [
                     <input class="input auth__input" type="text" id="db_name" name="db_name" placeholder="Name Database" value="" required>
                     <input class="input auth__input" type="text" id="username" name="username" placeholder="Username" value="root" required>
                     <input class="input auth__input" type="password" id="password" name="password" placeholder="Password" value="">
+
                 <button class="button">
                     Начать приключение
                 </button>
