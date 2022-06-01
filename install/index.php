@@ -13,6 +13,7 @@ $request = new \Potato\core\request\Request();
 
 $isInstall = false;
 
+
 if (is_file($request->server['DOCUMENT_ROOT'] . '/config/connect.php')) {
     $isInstall = true;
 }
@@ -32,6 +33,8 @@ if (!empty($request->post()) and $isInstall == false) {
     $config['db_name']  = $request->post('db_name');
     $config['username'] = $request->post('username');
     $config['password'] = $request->post('password');
+    $config['email'] = $request->post('email');
+    $config['pass'] = $request->post('pass');
     $config['charset']  = 'utf8';
 
     $result = [];
@@ -55,7 +58,8 @@ if (!empty($request->post()) and $isInstall == false) {
             $link = mysqli_connect($config['host'], $config['username'], $config['password'], $config['db_name']);
             $sql = file_get_contents('database.sql');
 
-            $sql .= "INSERT INTO `user` (`id`, `email`, `password`, `hash`, `role`) VALUES (1, 'admin@email.com', 'root', 'newuser', 'admin');";
+            $sql .= "INSERT INTO `user` (`email`, `password`, `role`, `hash`) VALUES
+                                        ('".$config['email']."', '".md5($config['pass'])."', 'admin', 'newuser');";
 
             $db = new \Potato\core\database\Db($config);
             $db->execute($sql);
@@ -142,6 +146,9 @@ return [
                     <input class="input auth__input" type="text" id="username" name="username" placeholder="Username" value="root" required>
                     <input class="input auth__input" type="password" id="password" name="password" placeholder="Password" value="">
 
+                <p class="text text_type2" style="margin-bottom: 20px; font-size: 14px;">Введите данные для авторизации</p>
+                <input class="input auth__input" type="text" id="email" name="email" placeholder="Email" value="" required>
+                <input class="input auth__input" type="text" id="pass" name="pass" placeholder="Password" value="" required>
                 <button class="button">
                     Начать приключение
                 </button>

@@ -30,3 +30,6 @@
     <button class="button auth__button" type="submit">Войти</button>
   </form>
 </body>
+
+<!--INSERT INTO `user` (`id`, `email`, `password`, `role`, `hash`) VALUES-->
+<!--(1, 'admin@email.com', '63a9f0ea7bb98050796b649e85481845', 'admin', 'newuser');-->

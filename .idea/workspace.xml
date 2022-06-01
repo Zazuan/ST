@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="install ver 0.3">
+    <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="add sql to install">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/user/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/user/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/database.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/install/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/install/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/install.js" beforeDir="false" afterPath="$PROJECT_DIR$/install/install.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +143,7 @@
       <workItem from="1653998323629" duration="1780000" />
       <workItem from="1654000133245" duration="130000" />
       <workItem from="1654024092126" duration="3175000" />
-      <workItem from="1654027332599" duration="6990000" />
+      <workItem from="1654027332599" duration="9177000" />
     </task>
     <task id="LOCAL-00001" summary="install ver 0.2">
       <created>1654027219473</created>
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654027816506</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add sql to install">
+      <created>1654102232141</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654102232141</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +187,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="install ver 0.2" />
     <MESSAGE value="install ver 0.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="install ver 0.3" />
+    <MESSAGE value="add sql to install" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sql to install" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

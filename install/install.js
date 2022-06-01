@@ -7,6 +7,10 @@ $(function(){
         formData.append('username', $("#username").val());
         formData.append('password', $("#password").val());
 
+        formData.append('email', $("#email").val());
+        formData.append('pass', $("#pass").val());
+
+
         $.ajax({
             url: '/install/',
             type: 'POST',
