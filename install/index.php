@@ -3,8 +3,6 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../potato/defines.php';
 
-use Admin\model\user\UserRepository;
-
 if (version_compare($ver = PHP_VERSION, $req = PHP_MIN, '<')) {
     die(sprintf('You are running PHP %s, but CMS needs at least PHP %s to run.', $ver, $req));
 }
@@ -37,6 +35,8 @@ if (!empty($request->post()) and $isInstall == false) {
     $config['pass'] = $request->post('pass');
     $config['charset']  = 'utf8';
 
+    if(empty($config['pass'])) $config['pass'] = "";
+
     $result = [];
 
     if (!class_exists('\\PDO')) {
@@ -47,8 +47,6 @@ if (!empty($request->post()) and $isInstall == false) {
     if (!$link) {
         $result['error'][] = 'Could not connect to database';
     } else {
-
-        //$sql = "CREATE DATABASE `".$config['db_name']."`; " . $sql;
         $sql = "CREATE DATABASE IF NOT EXISTS `".$config['db_name']."`; ";
 
         if (mysqli_query($link, $sql)) {
@@ -77,11 +75,12 @@ return [
             file_put_contents($request->server['DOCUMENT_ROOT'] . '/config/connect.php', $codeConfig);
 
         } else {
-            echo "Error creating database: " . mysqli_error($link);
+            $result['error'][] = "Error creating database: " . mysqli_error($link);;
         }
 
         mysqli_close($link);
-        header('Location: /install/');
+        //header('Location: /install/');
+
         exit;
     }
 }

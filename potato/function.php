@@ -1,6 +1,6 @@
 <?php
 
-function path($section)
+function path($section): string
 {
     $pathMask = ROOT_DIR . DS . '%s';
 
@@ -24,7 +24,7 @@ function path($section)
     }
 }
 
-function pathContent($section = '')
+function pathContent($section = ''): string
 {
     $pathMask = $_SERVER['DOCUMENT_ROOT'] . DS . 'source' . DS . '%s';
 
@@ -42,7 +42,7 @@ function pathContent($section = '')
     }
 }
 
-function getThemes()
+function getThemes(): array
 {
     $themesPath = '../source/theme';
     $list = scandir($themesPath);
@@ -77,7 +77,7 @@ function getThemes()
 //    $list = scandir($themesPath);
 //}
 
-function getPlugins()
+function getPlugins(): array
 {
     global $di;
 
@@ -102,7 +102,7 @@ function getPlugins()
     return $plugins;
 }
 
-function getTypes($switch = 'page')
+function getTypes($switch = 'page'): array
 {
     $themePath = pathContent('themes') . '/' . \Setting::get('active_theme');
     $list      = scandir($themePath);
@@ -128,7 +128,7 @@ function getTypes($switch = 'page')
 }
 
 
-function countPostsByArticle($articleId, $posts)
+function countPostsByArticle($articleId, $posts): int
 {
     $count = 0;
     foreach ($posts as $post) {

@@ -33,7 +33,7 @@ class Asset
 
     public static function render($extension)
     {
-        $listAssets = isset(self::$container[$extension]) ? self::$container[$extension] : false;
+        $listAssets = self::$container[$extension] ?? false;
 
         if ($listAssets) {
             $renderMethod = 'render' . ucfirst($extension);
