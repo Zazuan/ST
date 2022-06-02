@@ -16,7 +16,7 @@ if (is_file($request->server['DOCUMENT_ROOT'] . '/config/connect.php')) {
     $isInstall = true;
 }
 
-if (!empty($request->post())) {
+if (!empty($request->post()) and $isInstall == true) {
     $delete = $request->post('delete_install');
     if ($delete == 1){
         if (\Potato\helper\FileSystem::delTree($request->server['DOCUMENT_ROOT'] . '/install')) {
@@ -79,7 +79,7 @@ return [
         }
 
         mysqli_close($link);
-        //header('Location: /install/');
+        header('Location: /install/');
 
         exit;
     }
