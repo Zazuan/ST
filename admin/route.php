@@ -63,7 +63,6 @@ $this->router->add('page-update', '/admin/page/update/', 'PageController:update'
 $this->router->add('page-delete', '/admin/page/delete/', 'PageController:delete', 'POST');
 $this->router->add('page-updateSegment', '/admin/page/updateSegment/', 'PageController:updateSegment', 'POST');
 
-
 // Article
 $this->router->add('article-add', '/admin/article/add/', 'ArticleController:add', 'POST');
 $this->router->add('article-update', '/admin/article/update/', 'ArticleController:update', 'POST');

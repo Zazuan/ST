@@ -7,10 +7,10 @@
   <div class="formx__main">
     <div class="optimization__row flex-row">
       <div class="optimization__item"> <span class="optimization__text">Размер страницы</span>
-        <h3 class="optimization__data"><?php getFilesSize() ?></h3>
+        <h3 class="optimization__data"><?php echo getFilesSize(Theme::Path()) ?></h3>
       </div>
       <div class="optimization__item"> <span class="optimization__text">Время загрузки</span>
-        <h3 class="optimization__data">123 мс</h3>
+        <h3 class="optimization__data"><?php echo getLoadTime() ?></h3>
       </div>
       <div class="optimization__item"> <span class="optimization__text">Запросов в секунду</span>
         <h3 class="optimization__data">26</h3>

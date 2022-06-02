@@ -1,5 +1,7 @@
 <?php
 
+use Potato\core\template\Theme;
+
 function path($section): string
 {
     $pathMask = ROOT_DIR . DS . '%s';
@@ -31,8 +33,8 @@ function pathContent($section = ''): string
     // Return path to correct section.
     switch (strtolower($section))
     {
-        case 'themes':
-            return sprintf($pathMask, 'themes');
+        case 'theme':
+            return sprintf($pathMask, 'theme');
         case 'plugins':
             return sprintf($pathMask, 'plugins');
         case 'test':
@@ -139,32 +141,52 @@ function countPostsByArticle($articleId, $posts): int
     return $count;
 }
 
+function getFilesSize($path): string
+{
+    return convertBytes(scanDirectory(".." . $path));
+}
 
-//function getFilesSize()
-//{
-//    $fileSize = 0;
-//
-//    $themesPath = '../source/theme';
-//    $list = scandir($themesPath);
-//
-//    $currentTheme = Setting::get('active_theme');
-//
-//    if(!empty($list)) {
-//        unset($list[0]); //.
-//        unset($list[1]); //..
-//        foreach($list as $dir) {
-//            if ($dir == $currentTheme) {
-//                $pathThemeDir = $themesPath . '/' . $dir . '/';
-//                $fileList = scandir($pathThemeDir);
-//                foreach ($fileList as $file){
-//                    if(is_dir($file))
-//                        $fileSize += getFilesSize($file);
-//                    else
-//                        $fileSize += filesize($file);
-//                }
-//            }
-//        }
-//    }
-//
-//    return $fileSize;
-//}
+function scanDirectory($path)
+{
+    $path = rtrim($path, '/');
+    $size = 0;
+
+    $dir = opendir($path);
+    if (!$dir) {
+        return 0;
+    }
+
+    while (false !== ($file = readdir($dir))) {
+        if ($file == '.' || $file == '..') {
+            continue;
+        } elseif (is_dir($path . "/" . $file)) {
+            $size += scanDirectory($path . DS . $file);
+        } else {
+            $size += filesize($path . DS . $file);
+        }
+    }
+    closedir($dir);
+    return $size;
+}
+
+function convertBytes($size): string
+{
+    $i = 0;
+    while (floor($size / 1024) > 0) {
+        ++$i;
+        $size /= 1024;
+    }
+
+    $size = str_replace('.', ',', round($size, 1));
+    switch ($i) {
+        case 0: return $size .= ' байт';
+        case 1: return $size .= ' КБ';
+        case 2: return $size .= ' МБ';
+    }
+    return false;
+}
+
+function getLoadTime()
+{
+    return "Неизвестно";
+}

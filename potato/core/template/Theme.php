@@ -91,6 +91,17 @@ class Theme
         return ROOT_DIR . '/source/theme/' . $activeTheme;
     }
 
+    public static function Path()
+    {
+        $activeTheme = Setting::get('active_theme');
+
+        if(empty($activeTheme)) {
+            $activeTheme = Config::item('defaultTheme');
+        }
+
+        return '/source/theme/' . $activeTheme;
+    }
+
     public static function getData()
     {
         return static::$data;

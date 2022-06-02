@@ -17,8 +17,5 @@
             <?php foreach(Menu::getItems() as $item):?>
                 <a href="#" class=""><?= $item->title ?></a>
             <?php endforeach; ?>
-<!--            <a href="#" class="">photodiary</a>-->
-<!--            <a href="#" class="">music</a>-->
-<!--            <a href="#" class="">travel</a>-->
         </nav>
     </header>

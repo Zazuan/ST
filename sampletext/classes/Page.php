@@ -4,30 +4,25 @@ namespace SampleText\classes;
 
 class Page
 {
-    protected static $page;
+    protected static $store;
 
-    public static function setPage(Page $page)
+    public static function setStore($store)
     {
-        self::$page = $page;
+        self::$store = $store;
     }
 
-    public static function getPage()
+    public static function getStore()
     {
-        return self::$page;
-    }
-
-    public static function getId()
-    {
-        echo static::$page->id;
+        return self::$store;
     }
 
     public static function title()
     {
-        echo static::$page->title;
+        echo static::$store->title;
     }
 
     public static function content()
     {
-        echo static::$page->content;
+        echo static::$store->content;
     }
 }

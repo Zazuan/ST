@@ -3,7 +3,7 @@
   <div class="formx__title">Панель управления SampleText</div>
   <form class="control-panel__form form-control">
     <div class="checkbox form-control__item">
-      <input class="checkbox__input" type="checkbox" name="publish" id="publish"/>
+      <input class="checkbox__input" type="checkbox" name="publish" id="publish" checked/>
       <label class="text text_type2 checkbox__text" for="publish">Опубликовать</label>
     </div>
     <div class="checkbox form-control__item">
@@ -19,19 +19,19 @@
       <label class="text text_type2 checkbox__text" for="publish">Опубликовать</label>
     </div>
     <div class="checkbox form-control__item">
-      <input class="checkbox__input" type="checkbox" name="turn-activity" id="turn-activity"/>
+      <input class="checkbox__input" type="checkbox" name="turn-activity" id="turn-activity" checked/>
       <label class="text text_type2 checkbox__text" for="turn-activity">Последние действия</label>
     </div>
     <div class="checkbox form-control__item">
-      <input class="checkbox__input" type="checkbox" name="turn-create-post" id="turn-create-post"/>
-      <label class="text text_type2 checkbox__text" for="turn-create-post">Создание публикации</label>
+      <input class="checkbox__input" type="checkbox" name="turn-create-post" id="turn-create-post" checked/>
+      <label class="text text_type2 checkbox__text" for="turn-create-post">Добавить публикацию</label>
     </div>
     <div class="checkbox form-control__item">
-      <input class="checkbox__input" type="checkbox" name="turn-optimizator" id="turn-optimizator"/>
+      <input class="checkbox__input" type="checkbox" name="turn-optimizator" id="turn-optimizator" checked/>
       <label class="text text_type2 checkbox__text" for="turn-optimizator">Оптимизация</label>
     </div>
     <div class="checkbox form-control__item">
-      <input class="checkbox__input" type="checkbox" name="turn-users" id="turn-users"/>
+      <input class="checkbox__input" type="checkbox" name="turn-users" id="turn-users" checked/>
       <label class="text text_type2 checkbox__text" for="turn-users">Пользователи</label>
     </div>
     <div class="checkbox form-control__item">

@@ -3,6 +3,7 @@
 namespace SampleText\controller;
 
 use Admin\model\page\PageRepository;
+use Potato\core\redirect\Redirect;
 use SampleText\classes\Page;
 
 class_alias('SampleText\\Classes\\Page', 'Page');
@@ -19,18 +20,34 @@ class PageController extends CmsController
 
         $page = $pageModel->getPageBySegment($segment);
 
-        if ($page === false) {
+        if ($page === false or $page->status == 'inactive') {
             // add 404 page
-            header('Location: /');
-            exit;
+            Redirect::go('/');
         }
 
-        $template = 'page';
-        if ($page->type !== 'page') {
-            $template = sprintf(self::TEMPLATE_PAGE_MASK, $page->type);
+        $template = $page->type;
+
+        Page::setStore($page);
+
+        $this->view->render($template);
+    }
+
+    public function showPage($segment)
+    {
+        $this->load->model('Page', false, 'Admin');
+
+        $pageModel = $this->model->page;
+
+        $page = $pageModel->getPageBySegment($segment);
+
+        if ($page === false or $page->status == 'inactive') {
+            // add 404 page
+            Redirect::go('/');
         }
 
-        Page::setPage($page);
+        $template = 'single';
+
+        Page::setStore($page);
 
         $this->view->render($template);
     }

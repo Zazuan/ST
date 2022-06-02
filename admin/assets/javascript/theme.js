@@ -35,10 +35,8 @@ let theme = {
         //     }
         // });
     },
-
-    setActiveTheme: function(element, theme) {
+    setActiveTheme: function(theme) {
         let formData = new FormData();
-        let button = $(element);
 
         formData.append('theme', theme);
 
@@ -51,6 +49,24 @@ let theme = {
             contentType: false,
             success: function(result){
                 location.reload();
+            }
+        });
+    },
+    deleteTheme: function(theme) {
+        let formData = new FormData();
+
+        formData.append('theme', theme);
+
+        $.ajax({
+            url: '/admin/theme/delete/',
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function(result){
+                console.log(result);
+                //location.reload();
             }
         });
     }

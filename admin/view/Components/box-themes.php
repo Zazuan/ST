@@ -5,7 +5,7 @@
         <a onclick="theme.showEditor(<?php echo htmlspecialchars(json_encode($theme)) ?>)">
             <img src="/admin/assets/img/edit.svg"/>
         </a>
-        <a onclick="theme.deleteTheme(<?php //echo $theme->id  ?>)">
+        <a onclick="theme.deleteTheme('<?= $theme->dirTheme ?>')">
             <img src="/admin/assets/img/delete.svg"/>
         </a>
     </div>
@@ -28,7 +28,7 @@
         <?php if ($theme->dirTheme == $activeTheme): ?>
             <input class="box__item box__item_radio radio__input" type="radio" name="theme" checked="checked"/>
         <?php else: ?>
-            <input class="box__item box__item_radio radio__input" type="radio" name="theme" onclick="theme.setActiveTheme(this, '<?= $theme->dirTheme ?>')"/>
+            <input class="box__item box__item_radio radio__input" type="radio" name="theme" onclick="theme.setActiveTheme('<?= $theme->dirTheme ?>')"/>
         <?php endif; ?>
           <span class="box__item text text_type2 radio__text">Активировать</span>
       </label>

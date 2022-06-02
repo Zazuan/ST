@@ -44,16 +44,6 @@ class PageController extends AdminController
         }
     }
 
-    public function updateSegment()
-    {
-        $params = $this->request->post;
-
-        if(isset($params['page-id']) && strlen($params['page-id']) > 0) {
-            $pageId = $this->pageModel->refreshSegment($params);
-
-            echo $pageId;
-        }
-    }
 
     public function delete()
     {

@@ -7,7 +7,7 @@ class Component
 {
     public static function load($name, $data = [])
     {
-        $templateFile = ROOT_DIR . '/source/theme/default/' . $name . '.php';
+        $templateFile = Theme::getThemePath() . DS . $name . '.php';
 
         if (ENV == 'Admin') {
             $templateFile = path('view') . '/' . $name . '.php';

@@ -18,6 +18,7 @@ let page = {
 
         formData.append('page-title', $("input[name='page-title']").val());
         formData.append('page-content', $("input[name='page-content']").val());
+        formData.append('page-type', $("input[name='page-type']").val());
 
         $.ajax({
             url: '/admin/page/add/',
@@ -55,25 +56,6 @@ let page = {
     },
     editPageSegment: function () {
 
-    },
-    refreshSegment: function(segment, id) {
-        let formData = new FormData();
-
-        formData.append('page-id', id);
-        formData.append('page-segment', segment);
-
-        $.ajax({
-            url: '/admin/page/updateSegment/',
-            type: 'POST',
-            data: formData,
-            cache: false,
-            processData: false,
-            contentType: false,
-            success: function(result){
-                console.log(result);
-                //location.reload();
-            }
-        });
     },
     deletePage: function(data) {
         let id = data;

@@ -3,6 +3,7 @@
 namespace Admin\controller;
 
 use Admin\model\setting\SettingRepository;
+use Potato\core\template\Theme;
 
 class ThemeController extends AdminController
 {
@@ -43,5 +44,11 @@ class ThemeController extends AdminController
         $params = $this->request->post;
         $this->settingModel->updateActiveTheme($params['theme']);
 
+    }
+
+    public function delete()
+    {
+        $params = $this->request->post;
+        echo \Potato\helper\FileSystem::delTree(pathContent('theme') . DS . $params['theme']);
     }
 }

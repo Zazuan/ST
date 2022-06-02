@@ -24,6 +24,7 @@ class View {
     public function render($template, $vars = [])
     {
         $function = Theme::getThemePath() . '/function.php';
+
         if (file_exists($function)) {
             include_once $function;
         }

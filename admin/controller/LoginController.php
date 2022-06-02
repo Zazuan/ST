@@ -3,6 +3,7 @@
 namespace Admin\controller;
 
 use Potato\Controller;
+use Potato\core\redirect\Redirect;
 use Potato\DI\DI;
 use Potato\core\auth\Auth;
 use Potato\core\database\QueryBuilder;
@@ -18,9 +19,7 @@ class LoginController extends Controller
         $this->auth = new Auth();
 
         if ($this->auth->hashUser() !== null) {
-            // redirect
-            header('Location: /admin/');
-            exit;
+            Redirect::go('/admin/');
         }
     }
 
@@ -59,8 +58,7 @@ class LoginController extends Controller
 
                 $this->auth->authorize($hash);
 
-                header( 'Location: /admin/login/');
-                exit;
+                Redirect::go('/admin/login/');
             }
         }
 

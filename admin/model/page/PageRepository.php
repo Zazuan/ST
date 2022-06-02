@@ -22,7 +22,8 @@ class PageRepository extends Model
     {
         $page = new Page;
         $page->setTitle($params['page-title']);
-        $page->setContent($params['content']);
+        $page->setContent($params['page-content']);
+        $page->setType($params['page-type']);
         $page->setSegment(Text::transliteration($params['page-title']));
 
         return $page->save();
@@ -36,16 +37,6 @@ class PageRepository extends Model
             $page->setContent($params['page-content']);
             $page->setType($params['page-type']);
             $page->setStatus($params['page-status']);
-            $page->save();
-        }
-        return null;
-    }
-
-    public function refreshSegment($params)
-    {
-        if (isset($params['page-id'])) {
-            $page = new Page($params['page-id']);
-            $page->setSegment($params['page-segment']);
             $page->save();
         }
         return null;
@@ -68,9 +59,8 @@ class PageRepository extends Model
 
         $result = $this->db->query($sql, $this->queryBuilder->values);
 
-        return isset($result[0]) ? $result[0] : false;
+        return $result[0] ?? false;
     }
-
 
     public function deletePage($itemId)
     {
