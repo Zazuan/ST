@@ -4,6 +4,7 @@
 namespace Admin\controller;
 
 use Admin\model\post\PostRepository;
+use Potato\core\config\Config;
 
 class PostController extends AdminController
 {
@@ -18,6 +19,7 @@ class PostController extends AdminController
 
     public function index()
     {
+        $this->data['baseUrl'] = Config::item('base_url');
         $this->data['searchText'] = (!empty($this->request->get['s']) ? $this->request->get['s'] : '0');
         $this->data['posts'] = $this->postModel->getPosts();
         $this->view->render('posts', $this->data);

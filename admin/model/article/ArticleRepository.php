@@ -2,6 +2,7 @@
 
 namespace Admin\model\article;
 
+use Potato\helper\Text;
 use Potato\Model;
 
 class ArticleRepository extends Model
@@ -21,9 +22,8 @@ class ArticleRepository extends Model
     {
         $article = new Article();
         $article->setTitle($params['article-title']);
-        $articleID = $article->save();
-
-        return $articleID;
+        $article->setSegment(Text::transliteration($params['article-title']));
+        return $article->save();;
     }
 
     public function updateArticle($params)
@@ -31,10 +31,11 @@ class ArticleRepository extends Model
         if (isset($params['article-id'])) {
             $article = new Article($params['article-id']);
             $article->setTitle($params['article-title']);
-            $articleID = $article->save();
+            $article->setSegment(Text::transliteration($params['article-title']));
 
-            return $articleID;
+            return $article->save();
         }
+        return false;
     }
 
     public function getArticleData($id)
@@ -43,6 +44,32 @@ class ArticleRepository extends Model
         return $article->findOne();
     }
 
+    public function getArticleBySegment($segment)
+    {
+        $sql = $this->queryBuilder
+            ->select()
+            ->from('article')
+            ->where('segment', $segment)
+            ->limit(1)
+            ->sql();
+
+        $result = $this->db->query($sql, $this->queryBuilder->values);
+
+        return $result[0] ?? false;
+    }
+
+    public function getArticleById($id)
+    {
+        $sql = $this->queryBuilder
+            ->select()
+            ->from('article')
+            ->where('id', $id)
+            ->sql();
+
+        $result = $this->db->query($sql, $this->queryBuilder->values);
+
+        return $result[0] ?? false;
+    }
 
     public function deleteArticle($itemId)
     {

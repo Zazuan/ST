@@ -11,6 +11,7 @@ let page = {
         $("input[name='page-type']").val(data['type']);
         $("input[name='page-status']").val(data['status']);
         $("input[name='page-date']").val(data['date']);
+        $("input[name='page-segment']").val(data['segment']);
     },
     createPage: function() {
 
@@ -40,6 +41,7 @@ let page = {
         formData.append('page-content', $("#pageContent").val());
         formData.append('page-type', $("#pageType").val());
         formData.append('page-status', $("#pageStatus").val());
+        formData.append('page-segment', $("#pageSegment").val());
 
         $.ajax({
             url: '/admin/page/update/',
@@ -53,9 +55,6 @@ let page = {
                 location.reload();
             }
         });
-    },
-    editPageSegment: function () {
-
     },
     deletePage: function(data) {
         let id = data;

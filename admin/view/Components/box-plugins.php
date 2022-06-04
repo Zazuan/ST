@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box" data-title="<?php echo $plugin['title'] ?>">
   <div class="box__header">
     <div class="box__title"><?php echo $plugin['title'] ?></div>
     <div class="box__controls">

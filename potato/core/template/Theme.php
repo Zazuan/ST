@@ -75,7 +75,7 @@ class Theme
         $currentTheme = Setting::get('active_theme');
         if (empty($currentTheme)) $currentTheme = Config::item('defaultTheme', 'main');
 
-        $baseUrl      = Config::item('baseUrl', 'main');
+        $baseUrl = Config::item('base_url', 'main');
 
         return sprintf(self::URL_THEME_MASK, $baseUrl, $currentTheme);
     }

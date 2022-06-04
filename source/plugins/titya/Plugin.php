@@ -17,5 +17,6 @@ class Plugin extends \Potato\Plugin
     public function init()
     {
         // code here
+        echo 222;
     }
 }

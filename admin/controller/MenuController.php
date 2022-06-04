@@ -80,6 +80,8 @@ class MenuController extends AdminController
             Theme::block('components/m-items', [
                 'item' => $item
             ]);
+
+            print_r($item);
         }
     }
 

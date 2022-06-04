@@ -24,6 +24,7 @@ let menuItems = {
             },
             success: function(result){
                 console.log(result);
+                location.reload();
                 if (result) {
                     _this.draggable.append(result);
                 }

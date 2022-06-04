@@ -12,6 +12,8 @@ class Article
 
     public $id;
     public $title;
+    public $segment;
+    public $date;
 
     public function getId()
     {
@@ -31,5 +33,25 @@ class Article
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    public function getSegment()
+    {
+        return $this->segment;
+    }
+
+    public function setSegment($segment): void
+    {
+        $this->segment = $segment;
+    }
+
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    public function setDate($date): void
+    {
+        $this->date = $date;
     }
 }

@@ -25,12 +25,18 @@
               <?php if (!empty($searchText)) {
                   foreach ($posts as $post) {
                       if (stripos($post->title, $searchText) !== false)
-                          Theme::block('components/box-posts', (array) $post);
+                          Theme::block('components/box-posts', [
+                              'post' => $post,
+                              'baseUrl' => $baseUrl
+                          ]);
                   }
               }
               else {
                   foreach ($posts as $post) {
-                      Theme::block('components/box-posts', (array) $post);
+                      Theme::block('components/box-posts', [
+                          'post' => $post,
+                          'baseUrl' => $baseUrl
+                      ]);
                   }
               }; ?>
           </div>

@@ -37,12 +37,13 @@ class PageRepository extends Model
             $page->setContent($params['page-content']);
             $page->setType($params['page-type']);
             $page->setStatus($params['page-status']);
+            $page->setSegment($params['page-segment']);
             $page->save();
         }
         return null;
     }
 
-    public function getPageData($id)
+    public function getPageById($id)
     {
         $page = new Page($id);
         return $page->findOne();

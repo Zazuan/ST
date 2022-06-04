@@ -10,7 +10,8 @@ const DS = DIRECTORY_SEPARATOR;
 const ENV = 'SampleText';
 
 if (!is_file($_SERVER['DOCUMENT_ROOT'] . '/config/connect.php')) {
-    Redirect::go('/install/');
+    header('Location: ' . '/install/');
+    exit();
 }
 
 require_once 'potato/sample-load.php';

@@ -14,6 +14,7 @@ class Post
     public $title;
     public $content;
     public $article;
+    public $segment;
     public $status;
     public $date;
 
@@ -75,6 +76,16 @@ class Post
     public function setStatus($status)
     {
         $this->status = $status;
+    }
+
+    public function getSegment()
+    {
+        return $this->segment;
+    }
+
+    public function setSegment($segment): void
+    {
+        $this->segment = $segment;
     }
 
 

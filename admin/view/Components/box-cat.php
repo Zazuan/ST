@@ -1,4 +1,4 @@
-<div class="box" id="box-<?php echo $article->id ?>">
+<div class="box" id="box-<?php echo $article->id ?>" data-title="<?php echo $article->title ?>">
   <div class="box__header">
     <div class="box__title"><?php echo $article->title ?></div>
     <div class="box__controls">
@@ -14,6 +14,17 @@
     <div class="box__row">
       <div class="box__item text text_type2">Публикаций</div>
       <div class="box__item text text_type1"><?php echo countPostsByArticle($article->id, $posts) ?></div>
+    </div>
+    <div class="box__row">
+      <div class="box__item text text_type2">Дата создания</div>
+      <div class="box__item text text_type1"><?php echo $article->date ?></div>
+    </div>
+    <div class="box__row">
+      <div class="box__item text text_type2">
+          <a class="text text_type3" href="<?php echo '/category/' . $article->segment ?>">
+              <?php echo $baseUrl . '/category/' . $article->segment ?>
+          </a>
+      </div>
     </div>
   </div>
 </div>

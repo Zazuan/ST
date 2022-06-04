@@ -4,25 +4,26 @@
 namespace Admin\controller;
 
 use Admin\model\article\ArticleRepository;
+use Potato\core\config\Config;
 
 class ArticleController extends AdminController
 {
-    public $articleModel;
 
     public function __construct($di)
     {
         parent::__construct($di);
 
-        $this->articleModel = new ArticleRepository($this->di);
         $this->load->model('Post', false, 'Admin');
+        $this->load->model('Article', false, 'Admin');
 
     }
 
     public function index()
     {
         $this->data['searchText'] = (!empty($this->request->get['s']) ? $this->request->get['s'] : '0');
-        $this->data['articles'] = $this->articleModel->getArticles();
+        $this->data['articles'] = $this->model->article->getArticles();
         $this->data['posts'] = $this->model->post->getPosts();
+        $this->data['baseUrl'] = Config::item('base_url');
         $this->view->render('articles', $this->data);
     }
 

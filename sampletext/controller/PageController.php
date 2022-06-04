@@ -2,7 +2,6 @@
 
 namespace SampleText\controller;
 
-use Admin\model\page\PageRepository;
 use Potato\core\redirect\Redirect;
 use SampleText\classes\Page;
 
@@ -12,17 +11,36 @@ class PageController extends CmsController
 {
     const TEMPLATE_PAGE_MASK = 'page-%s';
 
+    public function __construct($di)
+    {
+        parent::__construct($di);
+        $this->load->model('Page', false, 'Admin');
+        $this->load->model('Post', false, 'Admin');
+        $this->load->model('Article', false, 'Admin');
+    }
+
+    public function index()
+    {
+        $postModel = $this->model->post;
+        $articleModel = $this->model->article;
+
+        $this->data['posts'] = $postModel->getPosts();
+        $this->data['articles'] = $articleModel->getArticles();
+
+        $this->view->render('index', $this->data);
+    }
+
     public function show($segment)
     {
-        $this->load->model('Page', false, 'Admin');
-
         $pageModel = $this->model->page;
+        $postModel = $this->model->post;
 
         $page = $pageModel->getPageBySegment($segment);
+        $this->data['posts'] = $postModel->getPosts();
 
         if ($page === false or $page->status == 'inactive') {
             // add 404 page
-            Redirect::go('/');
+            Redirect::go('/404');
         }
 
         $template = $page->type;
@@ -32,23 +50,49 @@ class PageController extends CmsController
         $this->view->render($template);
     }
 
-    public function showPage($segment)
+    public function showPost($segment)
     {
-        $this->load->model('Page', false, 'Admin');
+        $postModel = $this->model->post;
+        $articleModel = $this->model->article;
 
-        $pageModel = $this->model->page;
+        if (is_int($segment)) {
+            $post = $postModel->getPostById($segment);
+        } else {
+            $post = $postModel->getPostBySegment($segment);
+        }
 
-        $page = $pageModel->getPageBySegment($segment);
 
-        if ($page === false or $page->status == 'inactive') {
-            // add 404 page
-            Redirect::go('/');
+        $this->data['article'] = $articleModel->getArticleById($post[0]->article);
+        $this->data['post'] = $post;
+
+        if (empty($post) or $post[0]->status == 'inactive') {
+            Redirect::go('/404');
         }
 
         $template = 'single';
+        //Page::setStore($page);
 
-        Page::setStore($page);
+        $this->view->render($template, $this->data);
+    }
 
-        $this->view->render($template);
+    public function showArticle($segment)
+    {
+        $articleModel = $this->model->article;
+        $postModel = $this->model->post;
+
+        $article = $articleModel->getArticleBySegment($segment);
+        $posts = $postModel->getPostByArticle($article->id);
+
+        $this->data['article'] = $article;
+        $this->data['posts'] = $posts;
+
+        if (empty($article)) {
+            Redirect::go('/404');
+        }
+
+        $template = 'single';
+        //Page::setStore($page);
+
+        $this->view->render($template, $this->data);
     }
 }

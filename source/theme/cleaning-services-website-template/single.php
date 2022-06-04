@@ -34,7 +34,8 @@
                         </div>
                         <h1 class="section-title mb-3">Amet sit kasd ipsum lorem clita ipsum duo clita</h1>
                     </div>
-
+                    <?php echo "posts:"; print_r($posts) ?>
+                    <?php echo "article:"; print_r($article) ?>
                     <div class="mb-5">
                         <img class="img-fluid rounded w-100 mb-4" src="<?php get_url() ?>img/carousel-1.jpg" alt="Image">
                         <p>Sadipscing labore amet rebum est et justo gubergren. Et eirmod ipsum sit diam ut magna lorem.

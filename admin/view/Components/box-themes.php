@@ -1,4 +1,4 @@
-<div class="box" id="box-<?php  ?>">
+<div class="box" id="box-<?php echo $theme->id ?>" data-title="<?php echo $theme->title ?>">
   <div class="box__header">
     <div class="box__title"><?php echo $theme->title ?></div>
     <div class="box__controls">

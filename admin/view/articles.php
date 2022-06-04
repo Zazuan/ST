@@ -25,10 +25,10 @@
               <?php if (!empty($searchText)) {
                   foreach ($articles as $article) {
                       if (stripos($article->title, $searchText) !== false)
-
                           Theme::block('components/box-cat', [
                                   'article' => $article,
-                                  'posts' => $posts
+                                  'posts' => $posts,
+                                  'baseUrl' => $baseUrl
                           ]);
                   }
               }
@@ -36,7 +36,8 @@
                   foreach ($articles as $article) {
                       Theme::block('components/box-cat', [
                           'article' => $article,
-                          'posts' => $posts
+                          'posts' => $posts,
+                          'baseUrl' => $baseUrl
                       ]);
                   }
               }; ?>

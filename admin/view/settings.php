@@ -19,11 +19,19 @@
         <form class="settings" id="form-settings">
           <h1 class="settings__title">Настройки сайта</h1>
             <?php foreach ($settings as $setting): ?>
-          <div class="settings__item">
-            <label class="text text_type2" for="name"><?= $setting->name ?></label>
-            <input class="input settings__input" name="<?= $setting->name ?>"
-                   value="<?= $setting->value ?>" type="text">
-          </div>
+                <?php if($setting->name != 'Active theme'): ?>
+                    <div class="settings__item">
+                        <label class="text text_type2" for="name"><?= $setting->name ?></label>
+                        <input class="input settings__input" name="<?= $setting->name ?>"
+                           value="<?= $setting->value ?>" type="text">
+                    </div>
+                <?php else: ?>
+                    <div class="settings__item">
+                        <label class="text text_type2" for="name"><?= $setting->name ?></label>
+                        <input class="input settings__input text_type2" name="<?= $setting->name ?>"
+                            value="<?= $setting->value ?>" type="text" disabled>
+                    </div>
+                <?php endif; ?>
             <?php endforeach; ?>
           <button class="button settings__button" type="submit">Сохранить изменения</button>
         </form>

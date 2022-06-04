@@ -1,4 +1,4 @@
-<div class="box" id="box-<?php echo $page->id ?>">
+<div class="box" id="box-<?php echo $page->id ?>" data-title="<?php echo $page->title ?>">
   <div class="box__header">
     <div class="box__title" id="page-title"><?php echo $page->title ?></div>
     <div class="box__controls">
@@ -25,14 +25,10 @@
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">
-          <?php if ($page->type == 'single') :?>
-          <a class="text text_type3" href="<?php echo '/post/' . \Potato\Helper\Text::transliteration($page->title) ?>">
-              <?php echo $baseUrl . '/post/' . \Potato\Helper\Text::transliteration($page->title) ?>
-          </a>
-          <?php else: ?>
-          <a class="text text_type3" href="<?php echo '/' . \Potato\Helper\Text::transliteration($page->title) ?>">
-              <?php echo $baseUrl . '/' . \Potato\Helper\Text::transliteration($page->title) ?>
-          </a>
+          <?php if ($page->type != 'single') :?>
+              <a class="text text_type3" href="<?php echo '/' . $page->segment ?>">
+                  <?php echo $baseUrl . '/' . $page->segment ?>
+              </a>
           <?php endif; ?>
       </div>
     </div>

@@ -1,86 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="creating user when installing (fixes)">
+    <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="changed creating pages path. editing klean theme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/menuItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/menuItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/assets/javascript/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/ThemeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/ThemeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controller/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/MenuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/model/article/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/article/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/model/article/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/article/ArticleRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/model/page/PageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/page/PageRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/model/post/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/post/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/model/post/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/post/PostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/box-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-cat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/box-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/box-plugins.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-plugins.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/box-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-posts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/box-themes.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-themes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/Components/control-panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/control-panel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/modal/pages/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/modal/pages/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/modal/posts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/modal/posts/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/modal/posts/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/modal/posts/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/optimization.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/optimization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/search-bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/search-bar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/pages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/connect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/template/Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/Component.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/core/database/ActiveRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/database/ActiveRecord.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/core/template/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/Theme.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/core/template/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/classes/Page.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/classes/Page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/helper/FileSystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/helper/FileSystem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sampletext/controller/CmsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/controller/CmsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sampletext/controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/controller/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sampletext/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/READ-ME.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/blog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/cleaning-services-website-template.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/project.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/service.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/plugins/TestPlugin/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/plugins/TestPlugin/Plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/plugins/titya/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/plugins/titya/Plugin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/single.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/default/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/default/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/default/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/default/about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/default/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/default/single.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/about.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/contact.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/css/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/a-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/a-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/a-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/about-img-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/about-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/bg-img-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/bg-img-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/contact-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/dribble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/fb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/heading-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/hero-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/instagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/link.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/linkedin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/next-blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/next-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/p-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/p-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/p-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/p-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/p-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/p-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/pinterest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/prev-blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/prev-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/prev.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/search-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/slider-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/images/twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/js/jquery-3.4.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/portfolio.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/screen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/uliya-html/theme.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +92,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/theme/mediumish-html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -140,11 +101,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\source\theme\mediumish-html" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\install" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\assets\styles" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components" />
-      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\source\theme\cleaning-services-website-template" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\source\theme\default" />
@@ -222,7 +183,11 @@
       <workItem from="1654105434879" duration="7000" />
       <workItem from="1654116045117" duration="871000" />
       <workItem from="1654117695492" duration="1704000" />
-      <workItem from="1654185234219" duration="12086000" />
+      <workItem from="1654185234219" duration="12743000" />
+      <workItem from="1654201279294" duration="32000" />
+      <workItem from="1654205948070" duration="3234000" />
+      <workItem from="1654264670229" duration="6531000" />
+      <workItem from="1654284682106" duration="8402000" />
     </task>
     <task id="LOCAL-00001" summary="install ver 0.2">
       <created>1654027219473</created>
@@ -252,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654104682791</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed creating pages path. editing klean theme">
+      <created>1654197923525</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654197923525</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +247,8 @@
     <MESSAGE value="install ver 0.3" />
     <MESSAGE value="add sql to install" />
     <MESSAGE value="creating user when installing" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating user when installing" />
+    <MESSAGE value="changed creating pages path. editing klean theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed creating pages path. editing klean theme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

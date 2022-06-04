@@ -1,6 +1,6 @@
 <?php
 return [
     'base_url' => 'http://' . $_SERVER['HTTP_HOST'],
-    'defaultTimezone' => 'America/Chicago',
+    'default_timezone' => 'America/Chicago',
     'defaultTheme' => 'default'
 ];

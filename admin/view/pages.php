@@ -19,7 +19,7 @@
         <div class="container">
           <div class="search">
               <?php Theme::block('components/search-bar'); ?>
-              <a class="button" onclick="page.showCreator()" id="add-page-button">Добавить страницу</a>
+              <a class="button" onclick="page.showCreator()"  id="add-page-button">Добавить страницу</a>
           </div>
 
           <div class="box-row">

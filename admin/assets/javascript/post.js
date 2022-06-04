@@ -9,6 +9,8 @@ let post = {
         $("input[name='post-title']").val(data['title']);
         $("input[name='post-content']").val(data['content']);
         $("input[name='post-date']").val(data['date_created']);
+        $("input[name='post-article']").val(data['article']);
+        $("input[name='post-status']").val(data['status']);
     },
     createPost: function() {
 
@@ -16,6 +18,8 @@ let post = {
 
         formData.append('post-title', $("input[name='post-title']").val());
         formData.append('post-content', $("input[name='post-content']").val());
+        formData.append('post-article', $("input[name='post-article']").val());
+        formData.append('post-status', $("input[name='post-status']").val());
 
         $.ajax({
             url: '/admin/post/add/',
@@ -35,6 +39,8 @@ let post = {
         formData.append('post-id', $("#postId").val());
         formData.append('post-title', $("#postTitle").val());
         formData.append('post-content', $("#postContent").val());
+        formData.append('post-article', $("#postArticle").val());
+        formData.append('post-status', $("#postStatus").val());
         formData.append('post-date', $("#postDate").val());
 
         $.ajax({
