@@ -16,36 +16,24 @@ $this->router->add('settings', '/admin/settings/', 'SettingController:index');
 
 // Pages
 $this->router->add('pages', '/admin/pages/', 'PageController:index');
-$this->router->add('page-create', '/admin/pages/create/', 'PageController:create');
-$this->router->add('page-edit', '/admin/pages/edit/(id:int)', 'PageController:edit');
-//$this->router->add('page-delete', '/admin/page/delete/(id:int)', 'PageController:delete');
 
 // Article
 $this->router->add('articles', '/admin/articles/', 'ArticleController:index');
-$this->router->add('articles-create', '/admin/articles/create/', 'ArticleController:create');
-$this->router->add('articles-edit', '/admin/articles/edit/(id:int)', 'ArticleController:edit');
-//$this->router->add('articles-delete', '/admin/articles/delete/(id:int)', 'ArticleController:delete');
 
 // Posts
 $this->router->add('posts', '/admin/posts/', 'PostController:index');
-$this->router->add('post-create', '/admin/post/create/', 'PostController:create');
-$this->router->add('post-edit', '/admin/post/edit/(id:int)', 'PostController:edit');
-//$this->router->add('post-delete', '/admin/post/delete/(id:int)', 'PostController:delete');
 
 // Menus
 $this->router->add('menus', '/admin/menus/', 'MenuController:index');
-$this->router->add('menu-create', '/admin/menu/create/', 'MenuController:create');
-$this->router->add('menu-edit', '/admin/menu/edit/(id:int)', 'MenuController:edit');
-//$this->router->add('menu-delete', '/admin/menu/delete/(id:int)', 'MenuController:delete');
 
 // Themes
 $this->router->add('themes', '/admin/themes/', 'ThemeController:index');
-$this->router->add('theme-create', '/admin/theme/create/', 'ThemeController:create');
-$this->router->add('theme-edit', '/admin/theme/edit/(id:int)', 'ThemeController:edit');
 
 // Plugins
 $this->router->add('plugins', '/admin/plugins/', 'PluginController:index');
 
+// Resources
+$this->router->add('resources', '/admin/resources/', 'ResourceController:index');
 
 /**
  * POST Routes
@@ -94,3 +82,8 @@ $this->router->add('theme-activate', '/admin/theme/activateTheme/', 'ThemeContro
 $this->router->add('plugin-install', '/admin/plugin/install/', 'PluginController:installPlugin', 'POST');
 $this->router->add('plugin-activate', '/admin/plugin/activate/', 'PluginController:activatePlugin', 'POST');
 $this->router->add('plugin-delete', '/admin/plugin/delete/', 'PluginController:deletePlugin', 'POST');
+
+// Resources
+$this->router->add('resource-add', '/admin/resource/add/', 'ResourceController:add', 'POST');
+$this->router->add('resource-update', '/admin/resource/update/', 'ResourceController:update', 'POST');
+$this->router->add('resource-delete', '/admin/resource/delete/', 'ResourceController:delete', 'POST');

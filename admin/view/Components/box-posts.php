@@ -13,7 +13,7 @@
       </div>
     <div class="box__row">
       <div class="box__item text text_type2">Категория</div>
-      <div class="box__item text text_type1"><?php echo $post->article ?></div>
+      <div class="box__item text text_type1"><?php echo $post->article_title ?></div>
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">Статус</div>
@@ -25,8 +25,8 @@
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">
-          <a class="text text_type3" href="<?php echo '/post/' . \Potato\Helper\Text::transliteration($post->title) ?>">
-              <?php echo $baseUrl . '/post/' . \Potato\Helper\Text::transliteration($post->title) ?>
+          <a class="text text_type3" href="<?php echo '/post/' . $post->segment ?>">
+              <?php echo $baseUrl . '/post/' . $post->segment ?>
           </a>
       </div>
     </div>

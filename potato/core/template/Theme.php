@@ -64,10 +64,16 @@ class Theme
 
     public static function title()
     {
-        $nameSite    = Setting::get('name_site');
+        $nameSite = Setting::get('name_site');
+
+        echo $nameSite;
+    }
+
+    public static function description()
+    {
         $description = Setting::get('description');
 
-        echo $nameSite . ' | ' . $description;
+        echo $description;
     }
 
     public static function getUrl()

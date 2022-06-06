@@ -7,17 +7,18 @@ let post = {
 
         $("input[name='post-id']").val(data['id']);
         $("input[name='post-title']").val(data['title']);
-        $("input[name='post-content']").val(data['content']);
-        $("input[name='post-date']").val(data['date_created']);
-        $("input[name='post-article']").val(data['article']);
+        $("textarea[name='post-content']").val(data['content']);
+        $("input[name='post-article']").val(data['article_title']);
         $("input[name='post-status']").val(data['status']);
+        $("input[name='post-date']").val(data['date_created']);
+        $("input[name='post-segment']").val(data['segment']);
     },
     createPost: function() {
 
         let formData = new FormData();
 
         formData.append('post-title', $("input[name='post-title']").val());
-        formData.append('post-content', $("input[name='post-content']").val());
+        formData.append('post-content', $("textarea[name='post-content']").val());
         formData.append('post-article', $("input[name='post-article']").val());
         formData.append('post-status', $("input[name='post-status']").val());
 
@@ -41,6 +42,7 @@ let post = {
         formData.append('post-content', $("#postContent").val());
         formData.append('post-article', $("#postArticle").val());
         formData.append('post-status', $("#postStatus").val());
+        formData.append('post-segment', $("#postSegment").val());
         formData.append('post-date', $("#postDate").val());
 
         $.ajax({

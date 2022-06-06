@@ -31,8 +31,10 @@ class ArticleController extends AdminController
     {
         $params = $this->request->post;
 
+        print_r($params);
+
         if (isset($params['article-title'])) {
-            $pageId = $this->articleModel->createArticle($params);
+            $pageId = $this->model->article->createArticle($params);
 
             echo $pageId;
         }

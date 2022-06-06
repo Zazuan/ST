@@ -11,7 +11,7 @@
         </div>
         <div class="form__field">
             <label class="text text_type2" for="page-content">Контент</label>
-            <input id="pageContent" class="form__input input" type="text" name="page-content" placeholder="Контент" required>
+            <textarea id="pageContent" class="form__input input" type="text" name="page-content" placeholder="Контент" required></textarea>
         </div>
         <div class="form__field">
             <label class="text text_type2" for="page-type">Тип страницы</label>

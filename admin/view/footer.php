@@ -14,6 +14,8 @@
 <!--        1. Customize - lesson 34 <br>-->
 <!--        2. Add more exceptions <br>-->
 
+        delete post.article from database
+
     </footer>
     <script src="/admin/assets/static/javascript/jquery-3.6.0.min.js"></script>
     <script src="/admin/assets/static/javascript/jquery-ui.js"></script>
@@ -29,6 +31,7 @@
     <script src="/admin/assets/javascript/menuItems.js"></script>
     <script src="/admin/assets/javascript/theme.js"></script>
     <script src="/admin/assets/javascript/plugin.js"></script>
+    <script src="/admin/assets/javascript/resource.js"></script>
 
 </body>
 </html>

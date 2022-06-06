@@ -10,9 +10,9 @@ class ArticleRepository extends Model
     public function getArticles()
     {
         $sql = $this->queryBuilder
-            ->select()
-            ->from('article')
-            ->orderBy('id', 'DESC')
+            ->select('article')
+            ->from('post_article')
+            ->orderBy('article', 'DESC')
             ->sql();
 
         return $this->db->query($sql);

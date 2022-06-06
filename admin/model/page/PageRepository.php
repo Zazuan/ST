@@ -26,7 +26,7 @@ class PageRepository extends Model
         $page->setType($params['page-type']);
         $page->setSegment(Text::transliteration($params['page-title']));
 
-        return $page->save();
+        return $page->insert();
     }
 
     public function updatePage($params)
@@ -38,7 +38,7 @@ class PageRepository extends Model
             $page->setType($params['page-type']);
             $page->setStatus($params['page-status']);
             $page->setSegment($params['page-segment']);
-            $page->save();
+            $page->update();
         }
         return null;
     }

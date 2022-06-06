@@ -3,6 +3,7 @@
 namespace Potato\core\template;
 
 use Potato\core\config\Config;
+use Potato\core\redirect\Redirect;
 use Potato\DI\DI;
 
 class View {
@@ -32,9 +33,10 @@ class View {
         $templatePath = $this->getTemplatePath($template, ENV);
 
         if(!is_file($templatePath)) {
-            throw new \InvalidArgumentException(sprintf(
-                "Template %s not found %s", $template, $templatePath
-            ));
+            Redirect::go('/');
+//            throw new \InvalidArgumentException(sprintf(
+//                "Template %s not found %s", $template, $templatePath
+//            ));
         }
         $this->theme->setData($vars);
 

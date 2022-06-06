@@ -7,7 +7,7 @@ let page = {
 
         $("input[name='page-id']").val(data['id']);
         $("input[name='page-title']").val(data['title']);
-        $("input[name='page-content']").val(data['content']);
+        $("textarea[name='page-content']").val(data['content']);
         $("input[name='page-type']").val(data['type']);
         $("input[name='page-status']").val(data['status']);
         $("input[name='page-date']").val(data['date']);
@@ -18,7 +18,7 @@ let page = {
         let formData = new FormData();
 
         formData.append('page-title', $("input[name='page-title']").val());
-        formData.append('page-content', $("input[name='page-content']").val());
+        formData.append('page-content', $("textarea[name='page-content']").val());
         formData.append('page-type', $("input[name='page-type']").val());
 
         $.ajax({

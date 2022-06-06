@@ -70,6 +70,34 @@ class QueryBuilder
         return $this;
     }
 
+    public function innerJoin($table1, $table2, $column1, $column2)
+    {
+        $this->sql['inner_join'.$table2] = "INNER JOIN {$table2} ON {$table1}.{$column1} = {$table2}.{$column2} ";
+
+        return $this;
+    }
+
+    public function leftJoin($table1, $table2, $column1, $column2)
+    {
+        $this->sql['left_join'] = "LEFT JOIN {$table2} ON {$table1}.{$column1} = {$table2}.{$column2} ";
+
+        return $this;
+    }
+
+    public function rightJoin($table1, $table2, $column1, $column2)
+    {
+        $this->sql['right_join'] = "RIGHT JOIN {$table2} ON {$table1}.{$column1} = {$table2}.{$column2} ";
+
+        return $this;
+    }
+
+    public function fullJoin($table1, $table2, $column1, $column2)
+    {
+        $this->sql['full_join'] = "FULL OUTER JOIN {$table2} ON {$table1}.{$column1} = {$table2}.{$column2} ";
+
+        return $this;
+    }
+
     public function set($data = [])
     {
         $this->sql['set'] = "SET ";
@@ -80,7 +108,7 @@ class QueryBuilder
                 if (next($data)) {
                     $this->sql['set'] .= ", ";
                 }
-                $this->values[]    = $value;
+                $this->values[] = $value;
             }
         }
 
@@ -106,7 +134,6 @@ class QueryBuilder
                 }
             }
         }
-
         return $sql;
     }
 

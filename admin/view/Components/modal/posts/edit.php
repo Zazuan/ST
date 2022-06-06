@@ -11,7 +11,7 @@
         </div>
         <div class="form__field">
             <label class="text text_type2" for="post-content">Контент</label>
-            <input id="postContent" class="form__input input" type="text" name="post-content" placeholder="Контент" required>
+            <textarea id="postContent" class="form__input input" type="text" name="post-content" placeholder="Контент" required></textarea>
         </div>
         <div class="form__field">
             <label class="text text_type2" for="post-article">Категория</label>
@@ -24,6 +24,10 @@
         <div class="form__field">
             <label class="text text_type2" for="post-date">Дата создания</label>
             <input id="postDate" class="form__input input text_type2" type="text" name="post-date" placeholder="Дата создания" required disabled>
+        </div>
+        <div class="form__field">
+            <label class="text text_type2" for="post-segment">Сегмент</label>
+            <input id="postSegment" class="form__input input" type="text" name="post-segment" placeholder="Сегмент" required>
         </div>
         <div class="form__buttons">
             <button class="button form__button" id="close-modal" type="button">Отменить</button>

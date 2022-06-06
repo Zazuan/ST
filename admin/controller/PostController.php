@@ -14,14 +14,14 @@ class PostController extends AdminController
     {
         parent::__construct($di);
 
-        $this->postModel = new PostRepository($this->di);
+        $this->load->model('Post', false, 'Admin');
     }
 
     public function index()
     {
         $this->data['baseUrl'] = Config::item('base_url');
         $this->data['searchText'] = (!empty($this->request->get['s']) ? $this->request->get['s'] : '0');
-        $this->data['posts'] = $this->postModel->getPosts();
+        $this->data['posts'] = $this->model->post->getPostsWithArticle();
         $this->view->render('posts', $this->data);
     }
 
@@ -30,7 +30,7 @@ class PostController extends AdminController
         $params = $this->request->post;
 
         if (isset($params['post-title'])) {
-            $postId = $this->postModel->createPost($params);
+            $postId = $this->model->post->createPost($params);
 
             echo $postId;
         }
@@ -41,7 +41,7 @@ class PostController extends AdminController
         $params = $this->request->post;
 
         if (isset($params['post-title'])) {
-            $postId = $this->postModel->updatePost($params);
+            $postId = $this->model->post->updatePost($params);
 
             echo $postId;
         }
@@ -52,7 +52,7 @@ class PostController extends AdminController
         $params = $this->request->post;
 
         if(isset($params['delete_id']) && strlen($params['delete_id']) > 0) {
-            $postId = $this->postModel->deletePost($params['delete_id']);
+            $postId = $this->model->post->deletePost($params['delete_id']);
 
             echo $postId;
         }

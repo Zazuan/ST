@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="changed creating pages path. editing klean theme">
+    <list default="true" id="a763c4bc-395b-458c-bb3f-5806ee57c53b" name="Default Changelist" comment="add new theme. change page segment logic. moved file size func to Helper folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/menuItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/menuItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/assets/javascript/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/assets/javascript/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/javascript/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/javascript/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/styles/modal.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/modal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/styles/pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/styles/pages.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controller/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/MenuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controller/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/model/article/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/article/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/model/article/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/article/ArticleRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/model/page/PageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/page/PageRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/model/post/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/post/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/model/post/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/model/post/PostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/route.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/box-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-cat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/Components/box-pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/Components/box-plugins.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-plugins.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/box-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/Components/box-themes.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/box-themes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/modal/pages/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/modal/pages/edit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/modal/posts/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/modal/posts/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/view/Components/modal/posts/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/modal/posts/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/Components/optimization.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/optimization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/Components/search-bar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/search-bar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/pages.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/pages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/view/settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/Components/publish.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/Components/publish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/view/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/view/sidebar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/core/database/ActiveRecord.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/database/ActiveRecord.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/core/database/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/database/QueryBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/potato/core/template/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/Theme.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/function.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/function.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/potato/helper/FileSystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/helper/FileSystem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/controller/CmsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/controller/CmsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/core/template/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/core/template/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/potato/helper/Text.php" beforeDir="false" afterPath="$PROJECT_DIR$/potato/helper/Text.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sampletext/controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sampletext/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/sampletext/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/plugins/TestPlugin/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/plugins/TestPlugin/Plugin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/plugins/titya/Plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/plugins/titya/Plugin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/theme/cleaning-services-website-template/single.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +78,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/source/theme/mediumish-html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/admin/model/postArticle" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -101,18 +87,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\model\postArticle" />
+      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components\modal\resources" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\source\theme\mediumish-html" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\install" />
-      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\assets\styles" />
-      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\source\theme\default" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\config" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components\modal" />
       <recent name="D:\Soft\OpenServer\domains\SampleText.loc" />
-      <recent name="D:\Soft\OpenServer\domains\SampleText.loc\admin\view\Components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -187,7 +173,7 @@
       <workItem from="1654201279294" duration="32000" />
       <workItem from="1654205948070" duration="3234000" />
       <workItem from="1654264670229" duration="6531000" />
-      <workItem from="1654284682106" duration="8402000" />
+      <workItem from="1654284682106" duration="41298000" />
     </task>
     <task id="LOCAL-00001" summary="install ver 0.2">
       <created>1654027219473</created>
@@ -224,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654197923525</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add new theme. change page segment logic. moved file size func to Helper folder">
+      <created>1654346952280</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654346952280</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +241,8 @@
     <MESSAGE value="add sql to install" />
     <MESSAGE value="creating user when installing" />
     <MESSAGE value="changed creating pages path. editing klean theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed creating pages path. editing klean theme" />
+    <MESSAGE value="add new theme. change page segment logic. moved file size func to Helper folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new theme. change page segment logic. moved file size func to Helper folder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

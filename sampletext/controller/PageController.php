@@ -17,17 +17,21 @@ class PageController extends CmsController
         $this->load->model('Page', false, 'Admin');
         $this->load->model('Post', false, 'Admin');
         $this->load->model('Article', false, 'Admin');
+        $this->load->model('Resource', false, 'Admin');
     }
 
     public function index()
     {
         $postModel = $this->model->post;
         $articleModel = $this->model->article;
+        $resourceModel = $this->model->resource;
 
-        $this->data['posts'] = $postModel->getPosts();
+        $this->data['posts'] = $postModel->getPostsResources();
         $this->data['articles'] = $articleModel->getArticles();
 
         $this->view->render('index', $this->data);
+
+
     }
 
     public function show($segment)
@@ -54,6 +58,7 @@ class PageController extends CmsController
     {
         $postModel = $this->model->post;
         $articleModel = $this->model->article;
+        $resourceModel = $this->model->resource;
 
         if (is_int($segment)) {
             $post = $postModel->getPostById($segment);
@@ -61,8 +66,8 @@ class PageController extends CmsController
             $post = $postModel->getPostBySegment($segment);
         }
 
-
         $this->data['article'] = $articleModel->getArticleById($post[0]->article);
+        $this->data['resources'] = $resourceModel->getResourcesByParent($post[0]->id);
         $this->data['post'] = $post;
 
         if (empty($post) or $post[0]->status == 'inactive') {
@@ -70,7 +75,7 @@ class PageController extends CmsController
         }
 
         $template = 'single';
-        //Page::setStore($page);
+        Page::setStore($post);
 
         $this->view->render($template, $this->data);
     }
@@ -90,8 +95,8 @@ class PageController extends CmsController
             Redirect::go('/404');
         }
 
-        $template = 'single';
-        //Page::setStore($page);
+        $template = 'category';
+        Page::setStore($article);
 
         $this->view->render($template, $this->data);
     }

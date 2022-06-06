@@ -43,7 +43,27 @@ trait ActiveRecord
         return $find[0] ?? null;
     }
 
-    public function save()
+    public function insert()
+    {
+        $properties = $this->getIssetProperties();
+
+        try {
+            $this->db->execute(
+                $this->queryBuilder
+                    ->insert($this->getTable())
+                    ->set($properties)
+                    ->sql(),
+                $this->queryBuilder->values
+            );
+
+            return $this->db->lastInsertId();
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+        return false;
+    }
+
+    public function update()
     {
         $properties = $this->getIssetProperties();
 
@@ -57,25 +77,17 @@ trait ActiveRecord
                         ->sql(),
                     $this->queryBuilder->values
                 );
-            } else {
-                $this->db->execute(
-                    $this->queryBuilder
-                        ->insert($this->getTable())
-                        ->set($properties)
-                        ->sql(),
-                    $this->queryBuilder->values
-                );
             }
 
             return $this->db->lastInsertId();
         } catch (\Exception $e) {
             echo $e->getMessage();
         }
+        return false;
     }
 
     public function delete()
     {
-        $properties = $this->getIssetProperties();
 
         try {
             $this->db->execute(
@@ -108,8 +120,8 @@ trait ActiveRecord
     private function getProperties()
     {
         $reflection = new ReflectionClass($this);
-        $properties = $reflection->getProperties(ReflectionProperty::IS_PUBLIC);
 
-        return $properties;
+        return $reflection->getProperties(ReflectionProperty::IS_PUBLIC);
     }
+
 }

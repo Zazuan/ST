@@ -25,6 +25,10 @@
           <img class="nav__icon" src="/admin/assets/img/menu.svg" alt=""/>
           <span class="nav__text">Меню</span>
       </a>
+      <a class="nav__item" href="/admin/resources/" id="page-resources">
+          <img class="nav__icon" src="/admin/assets/img/media.svg" alt=""/>
+          <span class="nav__text">Медиатека</span>
+      </a>
       <a class="nav__item" href="/admin/themes/" id="page-themes">
           <img class="nav__icon" src="/admin/assets/img/theme.svg" alt=""/>
           <span class="nav__text">Темы</span>

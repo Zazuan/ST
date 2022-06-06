@@ -8,7 +8,7 @@
         </div>
         <div class="form__field">
             <label class="text text_type2" for="post-content">Контент</label>
-            <input class="form__input input " type="text" name="post-content" placeholder="Контент" required>
+            <textarea class="form__input input " type="text" name="post-content" placeholder="Контент" required></textarea>
         </div>
         <div class="form__field">
             <label class="text text_type2" for="post-article">Раздел</label>

@@ -17,7 +17,7 @@
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">Дата создания</div>
-      <div class="box__item text text_type1"><?php echo $article->date ?></div>
+      <div class="box__item text text_type1"><?php echo $article->date_created ?></div>
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">
