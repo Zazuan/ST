@@ -8,11 +8,18 @@
         </div>
         <div class="form__field">
             <label class="text text_type2" for="page-content">Контент</label>
-            <input class="form__input input " type="text" name="page-content" placeholder="Контент" required>
+            <textarea class="form__input input " type="text" name="page-content" placeholder="Контент" required></textarea>
         </div>
         <div class="form__field">
             <label class="text text_type2" for="page-type">Тип страницы</label>
             <input class="form__input input " type="text" name="page-type" placeholder="Тип страницы" required>
+        </div>
+        <div class="form__field">
+            <label class="text text_type2" for="page-create-status">Статус</label>
+            <select name="page-create-status" id="page-create-status" class="select-css">
+                <option value="Опубликована">Опубликована</option>
+                <option value="Черновик">Черновик</option>
+            </select>
         </div>
         <div class="form__buttons">
             <button class="button form__button" id="close-modal" type="button">Отменить</button>

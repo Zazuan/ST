@@ -43,6 +43,10 @@
         </div>
       </div>
     </div>
-  <?php Theme::block('components/modal/posts/create'); ?>
-  <?php Theme::block('components/modal/posts/edit'); ?>
+  <?php Theme::block('components/modal/posts/create', [
+          'articles' => $articles
+  ]); ?>
+  <?php Theme::block('components/modal/posts/edit', [
+          'articles' => $articles
+  ]); ?>
 <?php Theme::footer(); ?>

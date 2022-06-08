@@ -13,7 +13,6 @@ class Post
     public $id;
     public $title;
     public $content;
-    //public $article;
     public $segment;
     public $status;
     public $date;
@@ -88,16 +87,6 @@ class Post
     {
         $this->user = $user;
     }
-
-//    public function getArticle()
-//    {
-//        return $this->article;
-//    }
-//
-//    public function setArticle($article): void
-//    {
-//        $this->article = $article;
-//    }
 
 
 }

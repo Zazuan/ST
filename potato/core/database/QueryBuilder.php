@@ -79,7 +79,7 @@ class QueryBuilder
 
     public function leftJoin($table1, $table2, $column1, $column2)
     {
-        $this->sql['left_join'] = "LEFT JOIN {$table2} ON {$table1}.{$column1} = {$table2}.{$column2} ";
+        $this->sql['left_join'.$table2] = "LEFT JOIN ({$table2}) ON {$table1}.{$column1} = {$table2}.{$column2} ";
 
         return $this;
     }
@@ -94,6 +94,13 @@ class QueryBuilder
     public function fullJoin($table1, $table2, $column1, $column2)
     {
         $this->sql['full_join'] = "FULL OUTER JOIN {$table2} ON {$table1}.{$column1} = {$table2}.{$column2} ";
+
+        return $this;
+    }
+
+    public function union()
+    {
+        $this->sql['union'] = "UNION ";
 
         return $this;
     }

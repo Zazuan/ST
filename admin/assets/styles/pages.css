@@ -80,9 +80,12 @@ sub {
 input,
 textarea,
 select {
-  font-family: inherit;
+  /*font-family: inherit;*/
   font-size: inherit;
   font-weight: inherit;
+}
+textarea {
+  resize: vertical;
 }
 legend {
   color: #000;
@@ -361,6 +364,63 @@ body {
 .text_type3:hover {
   color: #F5F5F5;
   text-decoration-line: underline;
+}
+.select-css {
+  display: block;
+  font-size: 14px;
+  color: #F5F5F5;
+  line-height: 16px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  border: 1px solid #333333;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: 6px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #2B2B2B;
+}
+.select-css::-ms-expand { display: none; }
+.select-css:focus {
+  border: 1px solid #808080;
+  outline: 0;
+  color: #F5F5F5;
+}
+.select-css option {
+  font-size: 14px;
+  line-height: 16px;
+  color: #F5F5F5;
+}
+
+.select-css:before
+{
+  content: ">";
+  display: inline-block;
+  background: white;
+  position: absolute;
+  right: -5px;
+  top: 2px;
+  z-index: 2;
+  width: 30px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  border: 2px solid #ddd;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.select-css input[name="list"]:not(:checked) ~ #text
+{
+  color: black;
+  background: white;
+}
+
+.media-content {
+  max-width: 30% !important;
+  height: auto;
 }
 
 

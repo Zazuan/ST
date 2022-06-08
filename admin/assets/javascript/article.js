@@ -7,6 +7,7 @@ let article = {
 
         $("input[name='article-id']").val(data['id']);
         $("input[name='article-title']").val(data['title']);
+        $("input[name='article-segment']").val(data['segment']);
     },
     createArticle: function() {
 
@@ -22,6 +23,7 @@ let article = {
             processData: false,
             contentType: false,
             success: function(result){
+                //console.log(result);
                 location.reload();
             }
         });
@@ -31,6 +33,7 @@ let article = {
 
         formData.append('article-id', $("#articleId").val());
         formData.append('article-title', $("#articleTitle").val());
+        formData.append('article-segment', $("#articleSegment").val());
 
         $.ajax({
             url: '/admin/article/update/',
@@ -40,7 +43,7 @@ let article = {
             processData: false,
             contentType: false,
             success: function(result){
-                console.log(result);
+                //console.log(result);
                 location.reload();
             }
         });

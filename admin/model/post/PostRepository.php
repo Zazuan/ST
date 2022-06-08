@@ -22,13 +22,31 @@ class PostRepository extends Model
 
     public function getPostsWithArticle()
     {
-        $sql = $this->queryBuilder
-            ->select('post.*, article.title AS article_title')
-            ->from('post')
-            ->innerJoin('post', 'postarticle', 'id', 'post')
-            ->innerJoin('postarticle', 'article', 'article', 'id')
-            ->orderBy('id', 'DESC')
-            ->sql();
+//        $sql = $this->queryBuilder
+//            ->select('post.*, article.id AS article_id, article.title AS article_title')
+//            ->from('post')
+//            ->leftJoin('post', 'postarticle', 'id', 'post')
+//            ->innerJoin('postarticle', 'article', 'article', 'id')
+//            ->orderBy('id', 'DESC')
+//            ->sql();
+
+//        $sql = $this->queryBuilder
+//            ->select('post.*, article.id AS article_id, article.title AS article_title')
+//            ->from('post')
+//            ->leftJoin('post',
+//                'postarticle ' . $this->queryBuilder
+//                            ->innerJoin('postarticle', 'article', 'article', 'id')
+//                            ->sql(),
+//                'id', 'post')
+//            ->orderBy('id', 'DESC')
+//            ->sql();
+
+        $sql = "SELECT post.*, article.id AS article_id, article.title AS article_title
+            FROM POST
+            LEFT JOIN (postarticle
+                INNER JOIN article ON postarticle.article = article.id
+            ) ON post.id = postarticle.post
+            ORDER BY id DESC";
 
         return $this->db->query($sql);
     }
@@ -101,7 +119,7 @@ class PostRepository extends Model
         $post->setUser($params['user']);
 
         $postId = $post->insert();
-        if($postId != 0) $this->addArticle($params);
+        if($postId != 0 and $params['post-article'] != 'undefined') $this->addSubArticle($params);
 
         return $postId;
     }
@@ -116,7 +134,7 @@ class PostRepository extends Model
             $post->setStatus($params['post-status']);
 
             $postId = $post->update();
-            $this->updateArticle($params);
+            $this->updateSubArticle($params);
 
             return $postId;
         }
@@ -131,7 +149,8 @@ class PostRepository extends Model
             ->where('id', $itemId)
             ->sql();
 
-        $this->deleteArticle($itemId);
+        $this->deleteSubArticle($itemId);
+        $this->deleteSubResource($itemId);
         return $this->db->query($sql, $this->queryBuilder->values);
     }
 
@@ -139,12 +158,19 @@ class PostRepository extends Model
     {
         $array = $this->getPosts();
         $amount = 0;
+
         foreach($array as $elem)
             $amount += 1;
-        return 1000+$amount+1;
+
+        $newId = 1000+$amount+1;
+
+        foreach($array as $item)
+            if ($item->id > $newId) $newId = $item->id + 1;
+
+        return $newId;
     }
 
-    public function addArticle($params)
+    public function addSubArticle($params)
     {
         $sql = $this->queryBuilder
             ->insert('postarticle')
@@ -153,8 +179,13 @@ class PostRepository extends Model
         return $this->db->query($sql, $this->queryBuilder->values);
     }
 
-    public function updateArticle($params)
+    public function updateSubArticle($params)
     {
+        print_r($params);
+        if ($params['post-article'] == 'undefined')
+            return json_encode([
+                'result' => 'undefined'
+            ]);
         $sql = $this->queryBuilder
             ->update('postarticle')
             ->set(['post'=>$params['post-id'], 'article'=>$params['post-article']])
@@ -163,7 +194,7 @@ class PostRepository extends Model
         return $this->db->execute($sql, $this->queryBuilder->values);
     }
 
-    public function deleteArticle($itemId)
+    public function deleteSubArticle($itemId)
     {
         $sql = $this->queryBuilder
             ->delete()
@@ -171,6 +202,25 @@ class PostRepository extends Model
             ->where('post', $itemId)
             ->sql();
 
+        return $this->db->query($sql, $this->queryBuilder->values);
+    }
+
+    public function addSubResource($params)
+    {
+        $sql = $this->queryBuilder
+            ->insert('postresource')
+            ->set(['post'=>$params['post-id'], 'resource'=>$params['resource-id']])
+            ->sql();
+        return $this->db->query($sql, $this->queryBuilder->values);
+    }
+
+    public function deleteSubResource($itemId)
+    {
+        $sql = $this->queryBuilder
+            ->delete()
+            ->from('postresource')
+            ->where('post', $itemId)
+            ->sql();
         return $this->db->query($sql, $this->queryBuilder->values);
     }
 }

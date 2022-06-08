@@ -43,6 +43,36 @@ trait ActiveRecord
         return $find[0] ?? null;
     }
 
+    public function save()
+    {
+        $properties = $this->getIssetProperties();
+
+        try {
+            if (isset($this->id)) {
+                $this->db->execute(
+                    $this->queryBuilder
+                        ->update($this->getTable())
+                        ->set($properties)
+                        ->where('id', $this->id)
+                        ->sql(),
+                    $this->queryBuilder->values
+                );
+            } else {
+                $this->db->execute(
+                    $this->queryBuilder
+                        ->insert($this->getTable())
+                        ->set($properties)
+                        ->sql(),
+                    $this->queryBuilder->values
+                );
+            }
+
+            return $this->db->lastInsertId();
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
     public function insert()
     {
         $properties = $this->getIssetProperties();

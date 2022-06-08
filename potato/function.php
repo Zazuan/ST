@@ -127,8 +127,8 @@ function countPostsByArticle($articleId, $posts): int
 {
     $count = 0;
     foreach ($posts as $post) {
-        if (!empty($post->article)) {
-            if ($post->article == $articleId) $count++;
+        if (!empty($post->article_id)) {
+            if ($post->article_id == $articleId) $count++;
         }
     }
     return $count;

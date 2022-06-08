@@ -22,6 +22,7 @@ $this->router->add('articles', '/admin/articles/', 'ArticleController:index');
 
 // Posts
 $this->router->add('posts', '/admin/posts/', 'PostController:index');
+$this->router->add('post', '/admin/post/(id:int)', 'PostController:showPost');
 
 // Menus
 $this->router->add('menus', '/admin/menus/', 'MenuController:index');
@@ -60,6 +61,7 @@ $this->router->add('article-delete', '/admin/article/delete/', 'ArticleControlle
 $this->router->add('post-add', '/admin/post/add/', 'PostController:add', 'POST');
 $this->router->add('post-update', '/admin/post/update/', 'PostController:update', 'POST');
 $this->router->add('post-delete', '/admin/post/delete/', 'PostController:delete', 'POST');
+$this->router->add('post-add-resource', '/admin/post/addResource/', 'PostController:addResource', 'POST');
 
 // Menu
 $this->router->add('menu-add', '/admin/menu/add/', 'MenuController:add', 'POST');

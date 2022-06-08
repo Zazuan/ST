@@ -13,10 +13,10 @@
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">Публикаций</div>
-      <div class="box__item text text_type1"><?php echo countPostsByArticle($article->id, $posts) ?></div>
+      <div class="box__item text text_type1"><?php echo $article->posts ?></div>
     </div>
     <div class="box__row">
-      <div class="box__item text text_type2">Дата создания</div>
+      <div class="box__item text text_type2">Последнее изменение</div>
       <div class="box__item text text_type1"><?php echo $article->date_created ?></div>
     </div>
     <div class="box__row">

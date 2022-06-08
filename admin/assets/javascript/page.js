@@ -9,7 +9,7 @@ let page = {
         $("input[name='page-title']").val(data['title']);
         $("textarea[name='page-content']").val(data['content']);
         $("input[name='page-type']").val(data['type']);
-        $("input[name='page-status']").val(data['status']);
+        $("#post-edit-status option:selected").text(data['status']);
         $("input[name='page-date']").val(data['date']);
         $("input[name='page-segment']").val(data['segment']);
     },
@@ -20,6 +20,7 @@ let page = {
         formData.append('page-title', $("input[name='page-title']").val());
         formData.append('page-content', $("textarea[name='page-content']").val());
         formData.append('page-type', $("input[name='page-type']").val());
+        formData.append('page-status', $("#page-create-status option:selected").val());
 
         $.ajax({
             url: '/admin/page/add/',
@@ -29,6 +30,7 @@ let page = {
             processData: false,
             contentType: false,
             success: function(result){
+                //console.log(result);
                 location.reload();
             }
         });
@@ -40,7 +42,7 @@ let page = {
         formData.append('page-title', $("#pageTitle").val());
         formData.append('page-content', $("#pageContent").val());
         formData.append('page-type', $("#pageType").val());
-        formData.append('page-status', $("#pageStatus").val());
+        formData.append('page-status', $("#page-edit-status option:selected").val());
         formData.append('page-segment', $("#pageSegment").val());
 
         $.ajax({
@@ -51,7 +53,7 @@ let page = {
             processData: false,
             contentType: false,
             success: function(result){
-                console.log(result);
+                //console.log(result);
                 location.reload();
             }
         });

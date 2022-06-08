@@ -20,10 +20,13 @@ class PageRepository extends Model
 
     public function createPage($params)
     {
-        $page = new Page;
+        $params['page-id'] = $this->getAmount();
+
+        $page = new Page($params['page-id']);
         $page->setTitle($params['page-title']);
         $page->setContent($params['page-content']);
         $page->setType($params['page-type']);
+        $page->setStatus($params['page-status']);
         $page->setSegment(Text::transliteration($params['page-title']));
 
         return $page->insert();
@@ -72,6 +75,15 @@ class PageRepository extends Model
             ->sql();
 
         return $this->db->query($sql, $this->queryBuilder->values);
+    }
+
+    public function getAmount($array = []): int
+    {
+        $array = $this->getPages();
+        $amount = 0;
+        foreach($array as $elem)
+            $amount += 1;
+        return $amount+1;
     }
 
 }

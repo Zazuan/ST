@@ -18,8 +18,11 @@
             <input id="pageType" class="form__input input" type="text" name="page-type" placeholder="Тип страницы" required>
         </div>
         <div class="form__field">
-            <label class="text text_type2" for="page-status">Статус</label>
-            <input id="pageStatus" class="form__input input" type="text" name="page-status" placeholder="Статус" required>
+            <label class="text text_type2" for="page-edit-status">Статус</label>
+            <select name="page-edit-status" id="page-edit-status" class="select-css">
+                <option value="Опубликована">Опубликована</option>
+                <option value="Черновик">Черновик</option>
+            </select>
         </div>
         <div class="form__field">
             <label class="text text_type2" for="page-date">Дата создания</label>

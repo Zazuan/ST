@@ -7,20 +7,19 @@ use Potato\core\config\Config;
 
 class PageController extends AdminController
 {
-    public $pageModel;
 
     public function __construct($di)
     {
         parent::__construct($di);
 
-        $this->pageModel = new PageRepository($this->di);
+        $this->load->model('Page', false, 'Admin');
     }
 
     public function index()
     {
         $this->data['baseUrl'] = Config::item('base_url');
         $this->data['searchText'] = (!empty($this->request->get['s']) ? $this->request->get['s'] : '0');
-        $this->data['pages'] = $this->pageModel->getPages();
+        $this->data['pages'] = $this->model->page->getPages();
         $this->view->render('pages', $this->data);
     }
 
@@ -29,7 +28,7 @@ class PageController extends AdminController
         $params = $this->request->post;
 
         if (isset($params['page-title'])) {
-            $pageId = $this->pageModel->createPage($params);
+            $pageId = $this->model->page->createPage($params);
 
             echo $pageId;
         }
@@ -40,7 +39,7 @@ class PageController extends AdminController
         $params = $this->request->post;
 
         if (isset($params['page-title'])) {
-            $pageId = $this->pageModel->updatePage($params);
+            $pageId = $this->model->page->updatePage($params);
         }
     }
 
@@ -50,7 +49,7 @@ class PageController extends AdminController
         $params = $this->request->post;
 
         if(isset($params['delete_id']) && strlen($params['delete_id']) > 0) {
-            $pageId = $this->pageModel->deletePage($params['delete_id']);
+            $pageId = $this->model->page->deletePage($params['delete_id']);
         }
     }
 }

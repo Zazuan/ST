@@ -14,12 +14,20 @@
             <textarea id="postContent" class="form__input input" type="text" name="post-content" placeholder="Контент" required></textarea>
         </div>
         <div class="form__field">
-            <label class="text text_type2" for="post-article">Категория</label>
-            <input id="postArticle" class="form__input input" type="text" name="post-article" placeholder="Категория" required>
+            <label class="text text_type2" for="post-edit-article">Категория</label>
+            <select name="post-edit-article" id="post-edit-article" class="select-css">
+                <?php foreach ($articles as $article): ?>
+                    <option value="<?= $article->id ?>"><?= $article->title ?></option>
+                <?php endforeach; ?>
+            </select>
+            <span class="article_error" style="display: none; color: #C84141">Категория не найдена</span>
         </div>
         <div class="form__field">
-            <label class="text text_type2" for="post-status">Статус</label>
-            <input id="postStatus" class="form__input input" type="text" name="post-status" placeholder="Статус" required>
+            <label class="text text_type2" for="post-edit-status">Статус</label>
+            <select name="post-edit-status" id="post-edit-status" class="select-css">
+                <option value="Опубликована">Опубликована</option>
+                <option value="Черновик">Черновик</option>
+            </select>
         </div>
         <div class="form__field">
             <label class="text text_type2" for="post-date">Дата создания</label>

@@ -1,6 +1,8 @@
 <div class="box" id="box-<?php echo $post->id ?>" data-title="<?php echo $post->title ?>">
   <div class="box__header">
-    <div class="box__title"><?php echo $post->title ?></div>
+    <a class="box__title" href="/admin/post/<?php echo $post->id ?>" style="text-decoration: underline;">
+        <?php echo $post->title ?>
+    </a>
     <div class="box__controls">
         <a onclick="post.showEditor(<?php echo htmlspecialchars(json_encode($post)) ?>)"><img src="/admin/assets/img/edit.svg" alt="edit"/></a>
         <a onclick="post.deletePost(<?php echo $post->id ?>)"><img src="/admin/assets/img/delete.svg" alt="remove"></a>
@@ -20,7 +22,7 @@
       <div class="box__item text text_type1"><?php echo $post->status ?></div>
     </div>
     <div class="box__row">
-      <div class="box__item text text_type2">Создана</div>
+      <div class="box__item text text_type2">Последнее изменение</div>
       <div class="box__item text text_type1"><?php echo $post->date_created ?></div>
     </div>
     <div class="box__row">

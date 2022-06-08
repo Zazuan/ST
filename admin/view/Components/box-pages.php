@@ -12,16 +12,16 @@
       <div class="box__item text text_type1" id="page-id"><?php echo $page->id ?></div>
     </div>
     <div class="box__row">
-      <div class="box__item text text_type2">Создана</div>
-      <div class="box__item text text_type1"><?php echo $page->date ?></div>
-    </div>
-    <div class="box__row">
       <div class="box__item text text_type2">Тип</div>
       <div class="box__item text text_type1"><?php echo $page->type ?></div>
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">Статус</div>
       <div class="box__item text text_type1"><?php echo $page->status ?></div>
+    </div>
+    <div class="box__row">
+      <div class="box__item text text_type2">Последнее изменение</div>
+      <div class="box__item text text_type1"><?php echo $page->date ?></div>
     </div>
     <div class="box__row">
       <div class="box__item text text_type2">

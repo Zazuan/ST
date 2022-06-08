@@ -21,8 +21,14 @@ class ArticleController extends AdminController
     public function index()
     {
         $this->data['searchText'] = (!empty($this->request->get['s']) ? $this->request->get['s'] : '0');
-        $this->data['articles'] = $this->model->article->getArticles();
-        $this->data['posts'] = $this->model->post->getPosts();
+        $articles = $this->model->article->getArticles();
+
+        //refactor: move TO Article MODEL
+        foreach ($articles as $article) {
+            $article->posts = countPostsByArticle($article->id, $this->model->post->getPostsWithArticle());
+        }
+
+        $this->data['articles'] = $articles;
         $this->data['baseUrl'] = Config::item('base_url');
         $this->view->render('articles', $this->data);
     }
@@ -30,8 +36,6 @@ class ArticleController extends AdminController
     public function add()
     {
         $params = $this->request->post;
-
-        print_r($params);
 
         if (isset($params['article-title'])) {
             $pageId = $this->model->article->createArticle($params);
@@ -45,9 +49,9 @@ class ArticleController extends AdminController
         $params = $this->request->post;
 
         if (isset($params['article-title'])) {
-            $pageId = $this->articleModel->updateArticle($params);
+            $articleId = $this->model->article->updateArticle($params);
 
-            echo $pageId;
+            echo $articleId;
         }
     }
 
@@ -56,7 +60,7 @@ class ArticleController extends AdminController
         $params = $this->request->post;
 
         if(isset($params['delete_id']) && strlen($params['delete_id']) > 0) {
-            $pageId = $this->articleModel->deleteArticle($params['delete_id']);
+            $pageId = $this->model->article->deleteArticle($params['delete_id']);
 
             echo $pageId;
         }
