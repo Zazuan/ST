@@ -18,29 +18,29 @@ class PageController extends CmsController
         $this->load->model('Post', false, 'Admin');
         $this->load->model('Article', false, 'Admin');
         $this->load->model('Resource', false, 'Admin');
+        $this->load->model('User', false, 'Admin');
     }
 
     public function index()
     {
-        $postModel = $this->model->post;
-        $articleModel = $this->model->article;
-        $resourceModel = $this->model->resource;
+        $this->data['posts'] = $this->model->post->getPosts();
 
-        $this->data['posts'] = $postModel->getPostsResources();
-        $this->data['articles'] = $articleModel->getArticles();
+        foreach ($this->data['posts'] as $this->data['post']) {
+            $this->data['post']->article = $this->model->article->getArticleByParent($this->data['post']->id);
+            $this->data['post']->resources = $this->model->resource->getResourcesByParent($this->data['post']->id);
+            $this->data['post']->user = $this->model->user->getUserById($this->data['post']->user);
+        }
 
-        $this->view->render('index', $this->data);
+        $template = 'index';
 
+        $this->view->render($template, $this->data);
 
     }
 
     public function show($segment)
     {
-        $pageModel = $this->model->page;
-        $postModel = $this->model->post;
-
-        $page = $pageModel->getPageBySegment($segment);
-        $this->data['posts'] = $postModel->getPosts();
+        $page = $this->model->page->getPageBySegment($segment);
+        //$this->data['posts'] = $this->model->post->getPosts();
 
         if ($page === false or $page->status == 'inactive') {
             // add 404 page
@@ -56,21 +56,20 @@ class PageController extends CmsController
 
     public function showPost($segment)
     {
-        $postModel = $this->model->post;
-        $articleModel = $this->model->article;
-        $resourceModel = $this->model->resource;
 
-        if (is_int($segment)) {
-            $post = $postModel->getPostById($segment);
-        } else {
-            $post = $postModel->getPostBySegment($segment);
-        }
+        $post = $this->model->post->getPostBySegment($segment);
+        $articles = $this->model->article->getArticleByParent($post->id);
+        $resources = $this->model->resource->getResourcesByParent($post->id);
+        $user = $this->model->user->getUserById($post->user);
+        $relatedPosts = $this->model->post->getFullPosts(3);
 
-        $this->data['article'] = $articleModel->getArticleById($post[0]->article);
-        $this->data['resources'] = $resourceModel->getResourcesByParent($post[0]->id);
         $this->data['post'] = $post;
+        $this->data['post']->articles = $articles;
+        $this->data['post']->resources = $resources;
+        $this->data['post']->user = $user;
+        $this->data['relatedPosts'] = $relatedPosts;
 
-        if (empty($post) or $post[0]->status == 'inactive') {
+        if (empty($post) or $post->status == 'Черновик') {
             Redirect::go('/404');
         }
 
@@ -82,14 +81,11 @@ class PageController extends CmsController
 
     public function showArticle($segment)
     {
-        $articleModel = $this->model->article;
-        $postModel = $this->model->post;
-
-        $article = $articleModel->getArticleBySegment($segment);
-        $posts = $postModel->getPostByArticle($article->id);
+        $article = $this->model->article->getArticleBySegment($segment);
+        $posts = $this->model->post->getPostByArticle($article->id);
 
         $this->data['article'] = $article;
-        $this->data['posts'] = $posts;
+        $this->data['article']->posts = $posts;
 
         if (empty($article)) {
             Redirect::go('/404');

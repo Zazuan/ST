@@ -1,5 +1,6 @@
 <?php
 
+use Potato\core\config\Config;
 use Potato\core\template\Theme;
 
 function path($section): string
@@ -137,5 +138,11 @@ function countPostsByArticle($articleId, $posts): int
 
 function getLoadTime()
 {
-    return "Неизвестно";
+    $ch = curl_init(Config::item('base_url'));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    $html = curl_exec($ch);
+    curl_close($ch);
+    return bcdiv(curl_getinfo($ch)['total_time'], 1, 2) . " сек";
 }

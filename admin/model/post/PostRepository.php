@@ -14,10 +14,11 @@ class PostRepository extends Model
         $sql = $this->queryBuilder
             ->select()
             ->from('post')
+            ->where('status', 'Опубликована')
             ->orderBy('id', 'DESC')
             ->sql();
 
-        return $this->db->query($sql);
+        return $this->db->query($sql, $this->queryBuilder->values);
     }
 
     public function getPostsWithArticle()
@@ -41,7 +42,9 @@ class PostRepository extends Model
 //            ->orderBy('id', 'DESC')
 //            ->sql();
 
-        $sql = "SELECT post.*, article.id AS article_id, article.title AS article_title
+        $sql = "SELECT post.*, 
+                    article.id AS article_id, 
+                    article.title AS article_title
             FROM POST
             LEFT JOIN (postarticle
                 INNER JOIN article ON postarticle.article = article.id
@@ -51,28 +54,82 @@ class PostRepository extends Model
         return $this->db->query($sql);
     }
 
-    public function getPostsResources()
+    public function getPostsWithResources()
     {
-//        $sql = "SELECT `post`.*,
+
+//        $sql = $this->queryBuilder
+//            ->select("`post`.*,
 //                `resource`.id as resource_id,
 //                `resource`.title as resource_title,
 //                `resource`.content as resource_content,
 //                `resource`.type as resource_type,
-//                `resource`.parent as resource_parent  FROM `post`
-//                LEFT JOIN `resource`
-//                ON `post`.`id` = `resource`.`parent`
-//                LIMIT " . $limit . "
-//        ";
-        $sql = $this->queryBuilder
-            ->select("`post`.*, 
-                `resource`.id as resource_id, 
-                `resource`.title as resource_title, 
-                `resource`.content as resource_content, 
-                `resource`.type as resource_type, 
-                `resource`.parent as resource_parent")
-            ->from('post')
-            ->leftJoin('post','resource','id', 'parent')
-            ->sql();
+//                `resource`.parent as resource_parent")
+//            ->from('post')
+//            ->leftJoin('post','resource','id', 'parent')
+//            ->sql();
+
+        $sql = "SELECT post.*, 
+                    resource.id AS resource_id, 
+                    resource.title AS resource_title, 
+                    resource.path AS resource_path,
+                    resource.type AS resource_type
+            FROM POST
+            LEFT JOIN (postresource
+                INNER JOIN resource ON postresource.resource = resource.id
+            ) ON post.id = postresource.post
+            ORDER BY id DESC";
+
+        return $this->db->query($sql);
+    }
+
+    public function getFullPosts($limit = 4)
+    {
+        $sql = "SELECT post.*, 
+                    resource.id AS resource_id, 
+                    resource.title AS resource_title, 
+                    resource.path AS resource_path,
+                    resource.type AS resource_type, 
+                    article.id AS article_id, 
+                    article.title AS article_title,
+                    user.username AS user_username,
+                    user.email AS user_email
+            FROM POST
+            LEFT JOIN (postresource
+                INNER JOIN resource ON postresource.resource = resource.id
+            ) ON post.id = postresource.post
+            LEFT JOIN (postarticle
+                INNER JOIN article ON postarticle.article = article.id
+            ) ON post.id = postarticle.post
+            LEFT JOIN user ON post.user = user.id
+            ORDER BY id DESC
+            LIMIT " . $limit;
+
+        return $this->db->query($sql);
+    }
+
+    public function getFullPost($segment)
+    {
+        $sql = "SELECT post.*, 
+                    resource.id AS resource_id, 
+                    resource.title AS resource_title, 
+                    resource.path AS resource_path,
+                    resource.type AS resource_type, 
+                    article.id AS article_id, 
+                    article.title AS article_title,
+                    user.username AS user_username,
+                    user.email AS user_email
+            FROM post
+            LEFT JOIN (postresource
+                INNER JOIN resource ON postresource.resource = resource.id
+            ) ON post.id = postresource.post
+            LEFT JOIN (postarticle
+                INNER JOIN article ON postarticle.article = article.id
+            ) ON post.id = postarticle.post
+            LEFT JOIN user ON post.user = user.id
+            WHERE post.segment = '" . $segment . "'
+            ORDER BY id DESC
+            LIMIT 1";
+
         return $this->db->query($sql);
     }
 
@@ -85,7 +142,7 @@ class PostRepository extends Model
             ->limit(1)
             ->sql();
 
-        return $this->db->query($sql, $this->queryBuilder->values);
+        return $this->db->query($sql, $this->queryBuilder->values)[0] ?? false;
     }
 
     public function getPostByArticle($articleId, $limit = 5)
@@ -168,6 +225,17 @@ class PostRepository extends Model
             if ($item->id > $newId) $newId = $item->id + 1;
 
         return $newId;
+    }
+
+    public function getSubArticle($params)
+    {
+        $sql = $this->queryBuilder
+            ->select('article.*')
+            ->from('postarticle')
+            ->innerJoin('postarticle', 'article', 'article', 'id')
+            ->where('post', $params['post-id'])
+            ->sql();
+        return $this->db->query($sql, $this->queryBuilder->values);
     }
 
     public function addSubArticle($params)

@@ -85,6 +85,20 @@ class ArticleRepository extends Model
         return $result[0] ?? false;
     }
 
+    public function getArticleByParent($parent)
+    {
+        $sql = $this->queryBuilder
+            ->select('article.*, post.id AS post_id, post.title AS post_title')
+            ->from('article')
+            ->innerJoin('article', 'postarticle', 'id', 'article')
+            ->leftJoin('postarticle', 'post', 'post', 'id')
+            ->where('post.id', $parent)
+            ->orderBy('id', 'DESC')
+            ->sql();
+
+        return $this->db->query($sql, $this->queryBuilder->values) ?? false;
+    }
+
     public function getAmount($array = []): int
     {
         $array = $this->getArticles();

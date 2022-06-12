@@ -11,6 +11,7 @@ class User
     protected $table = 'user';
 
     public $id;
+    public $username;
     public $email;
     public $password;
     public $role;
@@ -75,5 +76,15 @@ class User
     public function setDateReg($date_reg)
     {
         $this->date_reg = $date_reg;
+    }
+
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    public function setUsername($username): void
+    {
+        $this->username = $username;
     }
 }

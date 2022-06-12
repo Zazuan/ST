@@ -40,7 +40,7 @@ trait ActiveRecord
         //,\PDO::FETCH_ASSOC
         );
 
-        return $find[0] ?? null;
+        return $find[0] ?? false;
     }
 
     public function save()

@@ -22,11 +22,13 @@ class UserRepository extends Model
     {
         $user = new User($id);
         return $user->findOne();
+
     }
 
-    public function addUser($email, $password, $role)
+    public function addUser($username, $email, $password, $role)
     {
         $user = new User();
+        $user->setUsername($username);
         $user->setEmail($email);
         $user->setPassword(md5($password));
         $user->setRole($role);
